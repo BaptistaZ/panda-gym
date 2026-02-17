@@ -32,7 +32,7 @@ class TrainConfig:
 
 def make_env(env_id: str, rank: int, seed: int) -> Callable[[], gym.Env]:
     def _init() -> gym.Env:
-        env = gym.make(env_id)  # sem render_mode: headless seguro
+        env = gym.make(env_id)  # no render_mode: headless safe
         env = Monitor(env)
         # seed no reset (gymnasium)
         env.reset(seed=seed + rank)

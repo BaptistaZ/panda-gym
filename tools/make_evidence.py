@@ -98,10 +98,6 @@ def list_event_files(run_dir: Path) -> List[Path]:
 
 
 def extract_tb_scalars(run_dir: Path) -> Dict[str, List[Tuple[int, float]]]:
-    """
-    Lê scalars TensorBoard (event files). Requer tensorboard instalado.
-    Retorna dict: tag -> [(step, value), ...]
-    """
     from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
 
     ea = EventAccumulator(str(run_dir), size_guidance={"scalars": 0})

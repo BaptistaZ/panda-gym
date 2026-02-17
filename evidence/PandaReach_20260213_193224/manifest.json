@@ -2,33 +2,28 @@
   "timestamp": "20260213_193224",
   "task": "PandaReach",
   "repo_root": "/home/tiago/work/panda-gym",
-
   "git": {
     "commit": "52bb228d18b1a9d85c70a4911b0c2a76b3f3fdd2",
-    "branch": "__FILL__",
-    "origin_url": "__FILL__",
+    "branch": "headless-tests",
+    "origin_url": "https://github.com/BaptistaZ/panda-gym.git",
     "status_porcelain": "?? evidence/\n?? tools/"
   },
-
   "platform": {
-    "uname": "__FILL__",
+    "uname": "Linux severus3 6.17.0-14-generic #14~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Jan 15 15:52:10 UTC 2 x86_64 x86_64 x86_64 GNU/Linux",
     "os_release": {
-      "name": "__FILL__",
-      "version": "__FILL__",
-      "id": "__FILL__"
+      "name": "Ubuntu",
+      "version": "24.04.3 LTS (Noble Numbat)",
+      "id": "ubuntu"
     },
-    "arch": "__FILL__"
+    "arch": "x86_64"
   },
-
   "hardware": {
-    "cpu_model": "__FILL__",
-    "cpu_logical_cores": "__FILL__",
-    "ram_gb": "__FILL__",
-    "gpu": "__FILL__"
+    "cpu_model": "Intel(R) Xeon(R) Silver 4210R CPU @ 2.40GHz",
+    "cpu_logical_cores": 4,
+    "ram_gb": 16,
+    "gpu": "none"
   },
-
   "python": "3.12.3 (main, Jan 22 2026, 20:57:42) [GCC 13.3.0]",
-
   "deps": {
     "panda_gym": "git+https://github.com/BaptistaZ/panda-gym.git@52bb228d18b1a9d85c70a4911b0c2a76b3f3fdd2",
     "pybullet": "3.2.7",
@@ -38,7 +33,6 @@
     "tensorboard": "2.20.0",
     "imageio_ffmpeg": "0.6.0"
   },
-
   "argv": [
     "tools/make_evidence.py",
     "--task",
@@ -53,7 +47,6 @@
     "--hash",
     "--pip-freeze"
   ],
-
   "args": {
     "repo_root": ".",
     "task": "PandaReach",
@@ -74,35 +67,48 @@
     "pip_freeze": true,
     "dump_tags": false
   },
-
   "evaluation_protocol": {
-    "checkpoints": ["ckpt10.zip", "mid.zip", "final.zip"],
-    "seeds": [0, 1, 2, 3, 4],
+    "checkpoints": [
+      "ckpt10.zip",
+      "mid.zip",
+      "final.zip"
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
     "episodes_per_seed": 50,
-    "regimes": ["deterministic", "stochastic"]
+    "regimes": [
+      "deterministic",
+      "stochastic"
+    ]
   },
-
   "run_info": {
     "ee": {
       "status": "ok",
       "run_dir": "/home/tiago/work/panda-gym/runs/PandaReach/ee/ppo_1",
       "n_tags": 14,
-      "train_seed": "__FILL__"
+      "train_seed": 0
     },
     "joints": {
       "status": "ok",
       "run_dir": "/home/tiago/work/panda-gym/runs/PandaReach/joints/ppo_1",
       "n_tags": 14,
-      "train_seed": "__FILL__"
+      "train_seed": 0
     }
   },
-
   "milestone_definition": {
-    "success_thresholds": [0.95, 0.99, 1.0],
+    "success_thresholds": [
+      0.95,
+      0.99,
+      1.0
+    ],
     "len_threshold": 3,
-    "stability_rule": "__FILL__"
+    "stability_rule": "first timestep t where metric stays >= threshold (or <= for ep_len) for all subsequent logged steps until the end"
   },
-
   "milestones": {
     "ee": {
       "final_step": 307200,
@@ -123,7 +129,6 @@
       "step_len_le_3_stable": null
     }
   },
-
   "produced": {
     "plots_overlay": [
       "plots/overlay_success_rate.png",
@@ -142,9 +147,7 @@
       "eval_summary.md"
     ]
   },
-
   "pip_freeze": "absl-py==2.4.0\ncloudpickle==3.1.2\ncontourpy==1.3.3\ncycler==0.12.1\nFarama-Notifications==0.0.4\nfilelock==3.20.0\nfonttools==4.61.1\nfsspec==2025.12.0\ngrpcio==1.78.0\ngymnasium==1.2.3\nImageIO==2.37.2\nimageio-ffmpeg==0.6.0\nJinja2==3.1.6\nkiwisolver==1.4.9\nMarkdown==3.10.2\nmarkdown-it-py==4.0.0\nMarkupSafe==2.1.5\nmatplotlib==3.10.8\nmdurl==0.1.2\nmpmath==1.3.0\nnetworkx==3.6.1\nnumpy==1.26.4\npackaging==26.0\n-e git+https://github.com/BaptistaZ/panda-gym.git@52bb228d18b1a9d85c70a4911b0c2a76b3f3fdd2#egg=panda_gym\npandas==3.0.0\npillow==12.1.1\nprotobuf==6.33.5\npybullet==3.2.7\nPygments==2.19.2\npyparsing==3.3.2\npython-dateutil==2.9.0.post0\nrich==14.3.2\nscipy==1.17.0\nsetuptools==82.0.0\nsix==1.17.0\nstable_baselines3==2.7.1\nsympy==1.14.0\ntensorboard==2.20.0\ntensorboard-data-server==0.7.2\ntorch==2.10.0+cpu\ntqdm==4.67.3\ntyping_extensions==4.15.0\nWerkzeug==3.1.5\nwheel==0.46.3",
-
   "hashes": {
     "models": {
       "ee:ckpt10.zip": {
@@ -178,7 +181,6 @@
         "bytes": 162716
       }
     },
-
     "events": {
       "ee:latest_event": {
         "path": "/home/tiago/work/panda-gym/runs/PandaReach/ee/ppo_1/events.out.tfevents.1771000100.severus3.24894.2",
@@ -191,26 +193,90 @@
         "bytes": 29042
       }
     },
-
     "events_all": {
-      "ee": "__FILL__",
-      "joints": "__FILL__"
+      "ee": [
+        {
+          "path": "runs/PandaReach/ee/ppo_1/events.out.tfevents.1770999726.severus3.24894.0",
+          "sha256": "c7e31480f96f6ac16f31d222417b426d551557002a7cc49bcc2729894069c118",
+          "bytes": 5868
+        },
+        {
+          "path": "runs/PandaReach/ee/ppo_1/events.out.tfevents.1770999810.severus3.24894.1",
+          "sha256": "6f88795f540c0eec18c201070fa6d1eff51fdafb3315c9cbdcc569703455e531",
+          "bytes": 23456
+        },
+        {
+          "path": "runs/PandaReach/ee/ppo_1/events.out.tfevents.1771000100.severus3.24894.2",
+          "sha256": "df8d3cc07e5cb88a96a2704e58a1ba24c2906ed490ab1193d91854a387ffac6d",
+          "bytes": 29042
+        }
+      ],
+      "joints": [
+        {
+          "path": "runs/PandaReach/joints/ppo_1/events.out.tfevents.1771000529.severus3.27062.0",
+          "sha256": "0d04fb6cc3104a3fee57e27b14344c3f39edb913b09672d1a37bf3f1224af921",
+          "bytes": 5868
+        },
+        {
+          "path": "runs/PandaReach/joints/ppo_1/events.out.tfevents.1771000608.severus3.27062.1",
+          "sha256": "cc9071efc37f89a833f4a118aeb16c9894482c9c412cfa7bbc49bfba0d0015d8",
+          "bytes": 23456
+        },
+        {
+          "path": "runs/PandaReach/joints/ppo_1/events.out.tfevents.1771000886.severus3.27062.2",
+          "sha256": "05f2b6d40b5c5c278a5d4424f82e403d6e582a4d2c1d0806db83ee56f3e3eeb6",
+          "bytes": 29042
+        }
+      ]
     },
-
     "outputs": {
-      "eval_results.csv": "__FILL__",
-      "eval_summary.md": "__FILL__",
-      "report.md": "__FILL__",
-      "plots/overlay_success_rate.png": "__FILL__",
-      "plots/overlay_ep_len_mean.png": "__FILL__"
+      "eval_results.csv": "0efc9c4da9dea063ddb6e57eeeb23f32c458ea0dc49f533e162bf1442a43d3e5",
+      "eval_summary.md": "f6c40ffb95e260021224655aa3845e0af88863d7165004e58430637a99a6e5dd",
+      "report.md": "a292b314f7ef6709f046d84f004ddcf2cfe6ee36349ceb50701af30c2bdc9681",
+      "plots/overlay_success_rate.png": "122b49b82264d3677f74c5a6b287c6ff952fb11bfefc7a2076a6181731063ac6",
+      "plots/overlay_ep_len_mean.png": "45e2fd3ef068f38a09774eb5fc727c56480bcb05b899d885a1ad6094bd25d282"
     }
   },
-
   "videos_index": [
     {
-      "path": "__FILL__",
-      "sha256": "__FILL__",
-      "bytes": "__FILL__"
+      "path": "videos/train_progress/PandaReach/ee/Reach__10pct__seed0.mp4",
+      "sha256": "2b320c3d8e225cc991a367a2e0ab19f6539bc6f8430c0a741b9aa84a501f8e8a",
+      "bytes": 1849429
+    },
+    {
+      "path": "videos/train_progress/PandaReach/ee/Reach__50pct__seed0.mp4",
+      "sha256": "e87f65a5cddea1ca5ed1cb131a6b125b7f4ee17e193f4d257c06c4bc8889448c",
+      "bytes": 144748
+    },
+    {
+      "path": "videos/train_progress/PandaReach/ee/Reach__100pct__seed0.mp4",
+      "sha256": "18b71689d695196afb94292f652634df03bb8acf2c993df477927d33003207a3",
+      "bytes": 129004
+    },
+    {
+      "path": "videos/train_progress/PandaReach/joints/ReachJ__10pct__seed0.mp4",
+      "sha256": "90f27f4a5da654a76e0e8a9ab068609fdc25d6c04098257611e29d1e7f1f28da",
+      "bytes": 1700278
+    },
+    {
+      "path": "videos/train_progress/PandaReach/joints/ReachJ__50pct__seed0.mp4",
+      "sha256": "1d3cbfafde4fee37d631a2added08b3803fa95d37455b82aaf42dbe987c2338c",
+      "bytes": 183564
+    },
+    {
+      "path": "videos/train_progress/PandaReach/joints/ReachJ__100pct__seed0.mp4",
+      "sha256": "ac1f247c22175633e230a3145e43184e3092e62928cc17c0e01c2aaf332370dc",
+      "bytes": 150049
+    },
+    {
+      "path": "videos/raw/PandaReach/final/Reach__final_demo__EE__seed0__eps2.mp4",
+      "sha256": "2f17a795449850c96c59e3a2de4b5ba82604c8dd7c090f04144ab1ddcb365f0d",
+      "bytes": 96021
+    },
+    {
+      "path": "videos/raw/PandaReach/final/Reach__final_demo__Joints__seed0__eps2.mp4",
+      "sha256": "1c3a979e28a0fa2fb469b687ef15333a47f2864de042a7899ab2868ff3ea33af",
+      "bytes": 112933
     }
   ]
 }
