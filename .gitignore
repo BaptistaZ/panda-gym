@@ -10,3 +10,5 @@ sandbox
 .venv
 .venv-train
 runs/
+# Local generated experiment outputs
+outputs/
