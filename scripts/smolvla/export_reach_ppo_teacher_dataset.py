@@ -85,6 +85,7 @@ def main():
             "teacher_action_6d_3",
             "teacher_action_6d_4",
             "teacher_action_6d_5",
+            "next_distance_to_target",
             "frame_path",
         ]
         writer.writerow(header)
@@ -100,6 +101,7 @@ def main():
             steps = 0
 
             for step in range(args.max_episode_steps):
+                # This row stores observation_t/frame_t paired with teacher action_t.
                 frame = env.render()
                 frame_path = ""
 
@@ -111,19 +113,23 @@ def main():
                 if args.save_video:
                     all_video_frames.append(frame)
 
+                achieved = obs["achieved_goal"].astype(np.float32)
+                desired = obs["desired_goal"].astype(np.float32)
+                state_6d = build_state_6d(obs)
+                distance = float(np.linalg.norm(achieved - desired))
+
                 action, _ = model.predict(obs, deterministic=True)
-                action = np.asarray(action, dtype=np.float32)
+                action = np.asarray(action, dtype=np.float32).reshape(-1)
+                action_6d = pad_action_to_6d(action)
 
                 next_obs, reward, terminated, truncated, info = env.step(action)
 
-                achieved = next_obs["achieved_goal"]
-                desired = next_obs["desired_goal"]
-                state_6d = build_state_6d(next_obs)
-                action_6d = pad_action_to_6d(action)
-                distance = float(np.linalg.norm(achieved - desired))
+                next_distance = float(
+                    np.linalg.norm(next_obs["achieved_goal"] - next_obs["desired_goal"])
+                )
                 is_success = bool(info.get("is_success", False))
 
-                best_distance = min(best_distance, distance)
+                best_distance = min(best_distance, next_distance)
                 success_seen = success_seen or is_success
                 total_reward += float(reward)
                 steps += 1
@@ -138,8 +144,9 @@ def main():
                     *achieved.tolist(),
                     *desired.tolist(),
                     *state_6d.tolist(),
-                    *action.tolist(),
+                    *action[:3].tolist(),
                     *action_6d.tolist(),
+                    next_distance,
                     frame_path,
                 ])
 
@@ -182,6 +189,10 @@ def main():
         "mean_best_distance": float(np.mean([ep["best_distance"] for ep in episodes_summary])),
         "mean_improvement": float(np.mean([ep["improvement"] for ep in episodes_summary])),
         "episodes_summary": episodes_summary,
+        "alignment_note": (
+            "Rows store observation_t/frame_t paired with teacher action_t. "
+            "next_distance_to_target is measured after env.step(action_t)."
+        ),
     }
 
     with open(out_dir / "summary.json", "w", encoding="utf-8") as f:
