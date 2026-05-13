@@ -1,0 +1,6 @@
+checkpoint,status,success_rate,mean_best_distance,mean_final_distance,mean_distance_improvement,mean_steps,source
+000100,ok,0.08,0.11742627818137408,0.5510744562372565,0.039076288305222986,46.16,outputs/smolvla_rollout/pandareach_chunk1_500_eval50_000100_scale1/rollout_summary.json
+000200,ok,0.4,0.06625680595636368,0.3610537204891443,0.09024576053023338,31.5,outputs/smolvla_rollout/pandareach_chunk1_500_eval50_000200_scale1/rollout_summary.json
+000300,ok,0.4,0.058587871231138705,0.4438499617949128,0.09791469525545836,31.26,outputs/smolvla_rollout/pandareach_chunk1_500_eval50_000300_scale1/rollout_summary.json
+000400,ok,0.82,0.04108792475424707,0.15233263692818583,0.11541464173235,11.52,outputs/smolvla_rollout/pandareach_chunk1_500_eval50_000400_scale1/rollout_summary.json
+000500,ok,0.74,0.04564100280404091,0.22119613885879516,0.11086156368255615,15.3,outputs/smolvla_rollout/pandareach_chunk1_500_eval50_000500_scale1/rollout_summary.json

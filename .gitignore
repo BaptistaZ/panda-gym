@@ -1,14 +1,81 @@
-env
-*__pycache__
-*.egg-info
-*.db
-.vscode
-_build/
+# Python bytecode / cache
+__pycache__/
+*__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python packaging / build
+*.egg-info/
+.eggs/
 build/
+_build/
+dist/
+site/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+.venv-*/
+venv/
+env/
+ENV/
+env*/
+.venv-train/
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Python tooling / tests / coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
 .DS_Store
-sandbox
-.venv
-.venv-train
-runs/
+Thumbs.db
+
+# Logs
+*.log
+
 # Local generated experiment outputs
 outputs/
+runs/
+wandb/
+mlruns/
+
+# Local temporary files
+tmp/
+temp/
+sandbox/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Large model/checkpoint exports generated locally
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.engine
+*.torchscript

@@ -1,0 +1,44 @@
+{
+  "source": "outputs/smolvla_rollout/pandareach_chunk1_500_eval50_scale1/rollout_summary.json",
+  "ok": true,
+  "purpose": "Evaluate SmolVLA checkpoint in PandaReach-v3 rollout",
+  "note": "This is an environment rollout test, not only offline action proximity.",
+  "device": "cuda",
+  "repo_id": "local/panda_reach_ppo_teacher_50",
+  "dataset_root": "outputs/lerobot_datasets/panda_reach_ppo_teacher_50",
+  "base_model": "lerobot/smolvla_base",
+  "checkpoint": "outputs/train/smolvla_panda_reach_chunk1_500/checkpoints/000500/pretrained_model",
+  "smolvla_action_scale": 1.0,
+  "episodes": 50,
+  "max_steps": 50,
+  "seed": 1000,
+  "summary": {
+    "random": {
+      "num_episodes": 50,
+      "success_rate": 0.2,
+      "mean_initial_distance": 0.15650256648659705,
+      "mean_final_distance": 0.24045159608125688,
+      "mean_best_distance": 0.08682312615215779,
+      "mean_distance_improvement": 0.06967944033443928,
+      "mean_steps": 42.86
+    },
+    "smolvla_checkpoint": {
+      "num_episodes": 50,
+      "success_rate": 0.74,
+      "mean_initial_distance": 0.15650256648659705,
+      "mean_final_distance": 0.20376588225364686,
+      "mean_best_distance": 0.044128416553139684,
+      "mean_distance_improvement": 0.11237414993345737,
+      "mean_steps": 15.44
+    },
+    "zero": {
+      "num_episodes": 50,
+      "success_rate": 0.0,
+      "mean_initial_distance": 0.15650256648659705,
+      "mean_final_distance": 0.15654161989688872,
+      "mean_best_distance": 0.15625881642103195,
+      "mean_distance_improvement": 0.00024375006556510927,
+      "mean_steps": 50.0
+    }
+  }
+}

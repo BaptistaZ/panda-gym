@@ -1,0 +1,312 @@
+[
+  {
+    "source": "outputs/smolvla_rollout/pandareach_chunk1_500_eval10_scale1/rollout_summary.json",
+    "ok": true,
+    "purpose": "Evaluate SmolVLA checkpoint in PandaReach-v3 rollout",
+    "device": "cuda",
+    "repo_id": "local/panda_reach_ppo_teacher_50",
+    "dataset_root": "outputs/lerobot_datasets/panda_reach_ppo_teacher_50",
+    "base_model": "lerobot/smolvla_base",
+    "checkpoint": "outputs/train/smolvla_panda_reach_chunk1_500/checkpoints/000500/pretrained_model",
+    "smolvla_action_scale": 1.0,
+    "episodes": 10,
+    "max_steps": 50,
+    "seed": 1000,
+    "summary": {
+      "random": {
+        "num_episodes": 10,
+        "success_rate": 0.4,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.18286443017423154,
+        "mean_best_distance": 0.08141197599470615,
+        "mean_distance_improvement": 0.10165550671517849,
+        "mean_steps": 35.4
+      },
+      "smolvla_checkpoint": {
+        "num_episodes": 10,
+        "success_rate": 0.8,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.1992828082293272,
+        "mean_best_distance": 0.045712726190686226,
+        "mean_distance_improvement": 0.13735475651919843,
+        "mean_steps": 13.2
+      },
+      "zero": {
+        "num_episodes": 10,
+        "success_rate": 0.0,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.1830805629491806,
+        "mean_best_distance": 0.18281798884272576,
+        "mean_distance_improvement": 0.00024949386715888977,
+        "mean_steps": 50.0
+      }
+    }
+  },
+  {
+    "source": "outputs/smolvla_rollout/pandareach_chunk1_500_eval50_scale1/rollout_summary.json",
+    "ok": true,
+    "purpose": "Evaluate SmolVLA checkpoint in PandaReach-v3 rollout",
+    "device": "cuda",
+    "repo_id": "local/panda_reach_ppo_teacher_50",
+    "dataset_root": "outputs/lerobot_datasets/panda_reach_ppo_teacher_50",
+    "base_model": "lerobot/smolvla_base",
+    "checkpoint": "outputs/train/smolvla_panda_reach_chunk1_500/checkpoints/000500/pretrained_model",
+    "smolvla_action_scale": 1.0,
+    "episodes": 50,
+    "max_steps": 50,
+    "seed": 1000,
+    "summary": {
+      "random": {
+        "num_episodes": 50,
+        "success_rate": 0.2,
+        "mean_initial_distance": 0.15650256648659705,
+        "mean_final_distance": 0.24045159608125688,
+        "mean_best_distance": 0.08682312615215779,
+        "mean_distance_improvement": 0.06967944033443928,
+        "mean_steps": 42.86
+      },
+      "smolvla_checkpoint": {
+        "num_episodes": 50,
+        "success_rate": 0.74,
+        "mean_initial_distance": 0.15650256648659705,
+        "mean_final_distance": 0.20376588225364686,
+        "mean_best_distance": 0.044128416553139684,
+        "mean_distance_improvement": 0.11237414993345737,
+        "mean_steps": 15.44
+      },
+      "zero": {
+        "num_episodes": 50,
+        "success_rate": 0.0,
+        "mean_initial_distance": 0.15650256648659705,
+        "mean_final_distance": 0.15654161989688872,
+        "mean_best_distance": 0.15625881642103195,
+        "mean_distance_improvement": 0.00024375006556510927,
+        "mean_steps": 50.0
+      }
+    }
+  },
+  {
+    "source": "outputs/smolvla_rollout/pandareach_chunk1_50_eval10/rollout_summary.json",
+    "ok": true,
+    "purpose": "Evaluate SmolVLA checkpoint in PandaReach-v3 rollout",
+    "device": "cuda",
+    "repo_id": "local/panda_reach_ppo_teacher_50",
+    "dataset_root": "outputs/lerobot_datasets/panda_reach_ppo_teacher_50",
+    "base_model": "lerobot/smolvla_base",
+    "checkpoint": "outputs/train/smolvla_panda_reach_chunk1_50/checkpoints/000050/pretrained_model",
+    "smolvla_action_scale": null,
+    "episodes": 10,
+    "max_steps": 50,
+    "seed": 1000,
+    "summary": {
+      "random": {
+        "num_episodes": 10,
+        "success_rate": 0.4,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.18286443017423154,
+        "mean_best_distance": 0.08141197599470615,
+        "mean_distance_improvement": 0.10165550671517849,
+        "mean_steps": 35.4
+      },
+      "smolvla_base": {
+        "num_episodes": 10,
+        "success_rate": 0.0,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.5305534362792969,
+        "mean_best_distance": 0.18303278982639312,
+        "mean_distance_improvement": 3.469288349151611e-05,
+        "mean_steps": 50.0
+      },
+      "smolvla_checkpoint": {
+        "num_episodes": 10,
+        "success_rate": 0.4,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.38249588906764986,
+        "mean_best_distance": 0.1042710304260254,
+        "mean_distance_improvement": 0.07879645228385926,
+        "mean_steps": 32.2
+      },
+      "zero": {
+        "num_episodes": 10,
+        "success_rate": 0.0,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.1830805629491806,
+        "mean_best_distance": 0.18281798884272576,
+        "mean_distance_improvement": 0.00024949386715888977,
+        "mean_steps": 50.0
+      }
+    }
+  },
+  {
+    "source": "outputs/smolvla_rollout/pandareach_chunk1_50_eval10_scale025/rollout_summary.json",
+    "ok": true,
+    "purpose": "Evaluate SmolVLA checkpoint in PandaReach-v3 rollout",
+    "device": "cuda",
+    "repo_id": "local/panda_reach_ppo_teacher_50",
+    "dataset_root": "outputs/lerobot_datasets/panda_reach_ppo_teacher_50",
+    "base_model": "lerobot/smolvla_base",
+    "checkpoint": "outputs/train/smolvla_panda_reach_chunk1_50/checkpoints/000050/pretrained_model",
+    "smolvla_action_scale": 0.25,
+    "episodes": 10,
+    "max_steps": 50,
+    "seed": 1000,
+    "summary": {
+      "random": {
+        "num_episodes": 10,
+        "success_rate": 0.4,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.18286443017423154,
+        "mean_best_distance": 0.08141197599470615,
+        "mean_distance_improvement": 0.10165550671517849,
+        "mean_steps": 35.4
+      },
+      "smolvla_checkpoint": {
+        "num_episodes": 10,
+        "success_rate": 0.0,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.37462763786315917,
+        "mean_best_distance": 0.16466323509812356,
+        "mean_distance_improvement": 0.018404247611761092,
+        "mean_steps": 50.0
+      },
+      "zero": {
+        "num_episodes": 10,
+        "success_rate": 0.0,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.1830805629491806,
+        "mean_best_distance": 0.18281798884272576,
+        "mean_distance_improvement": 0.00024949386715888977,
+        "mean_steps": 50.0
+      }
+    }
+  },
+  {
+    "source": "outputs/smolvla_rollout/pandareach_chunk1_50_eval10_scale05/rollout_summary.json",
+    "ok": true,
+    "purpose": "Evaluate SmolVLA checkpoint in PandaReach-v3 rollout",
+    "device": "cuda",
+    "repo_id": "local/panda_reach_ppo_teacher_50",
+    "dataset_root": "outputs/lerobot_datasets/panda_reach_ppo_teacher_50",
+    "base_model": "lerobot/smolvla_base",
+    "checkpoint": "outputs/train/smolvla_panda_reach_chunk1_50/checkpoints/000050/pretrained_model",
+    "smolvla_action_scale": 0.5,
+    "episodes": 10,
+    "max_steps": 50,
+    "seed": 1000,
+    "summary": {
+      "random": {
+        "num_episodes": 10,
+        "success_rate": 0.4,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.18286443017423154,
+        "mean_best_distance": 0.08141197599470615,
+        "mean_distance_improvement": 0.10165550671517849,
+        "mean_steps": 35.4
+      },
+      "smolvla_checkpoint": {
+        "num_episodes": 10,
+        "success_rate": 0.1,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.4568888243287802,
+        "mean_best_distance": 0.1254731934517622,
+        "mean_distance_improvement": 0.05759428925812245,
+        "mean_steps": 46.4
+      },
+      "zero": {
+        "num_episodes": 10,
+        "success_rate": 0.0,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.1830805629491806,
+        "mean_best_distance": 0.18281798884272576,
+        "mean_distance_improvement": 0.00024949386715888977,
+        "mean_steps": 50.0
+      }
+    }
+  },
+  {
+    "source": "outputs/smolvla_rollout/pandareach_chunk1_50_eval10_scale1/rollout_summary.json",
+    "ok": true,
+    "purpose": "Evaluate SmolVLA checkpoint in PandaReach-v3 rollout",
+    "device": "cuda",
+    "repo_id": "local/panda_reach_ppo_teacher_50",
+    "dataset_root": "outputs/lerobot_datasets/panda_reach_ppo_teacher_50",
+    "base_model": "lerobot/smolvla_base",
+    "checkpoint": "outputs/train/smolvla_panda_reach_chunk1_50/checkpoints/000050/pretrained_model",
+    "smolvla_action_scale": 1.0,
+    "episodes": 10,
+    "max_steps": 50,
+    "seed": 1000,
+    "summary": {
+      "random": {
+        "num_episodes": 10,
+        "success_rate": 0.4,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.18286443017423154,
+        "mean_best_distance": 0.08141197599470615,
+        "mean_distance_improvement": 0.10165550671517849,
+        "mean_steps": 35.4
+      },
+      "smolvla_checkpoint": {
+        "num_episodes": 10,
+        "success_rate": 0.2,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.5125163108110428,
+        "mean_best_distance": 0.1053709227591753,
+        "mean_distance_improvement": 0.07769655995070934,
+        "mean_steps": 40.7
+      },
+      "zero": {
+        "num_episodes": 10,
+        "success_rate": 0.0,
+        "mean_initial_distance": 0.18306748270988465,
+        "mean_final_distance": 0.1830805629491806,
+        "mean_best_distance": 0.18281798884272576,
+        "mean_distance_improvement": 0.00024949386715888977,
+        "mean_steps": 50.0
+      }
+    }
+  },
+  {
+    "source": "outputs/smolvla_rollout/pandareach_chunk1_50_eval50/rollout_summary.json",
+    "ok": true,
+    "purpose": "Evaluate SmolVLA checkpoint in PandaReach-v3 rollout",
+    "device": "cuda",
+    "repo_id": "local/panda_reach_ppo_teacher_50",
+    "dataset_root": "outputs/lerobot_datasets/panda_reach_ppo_teacher_50",
+    "base_model": "lerobot/smolvla_base",
+    "checkpoint": "outputs/train/smolvla_panda_reach_chunk1_50/checkpoints/000050/pretrained_model",
+    "smolvla_action_scale": null,
+    "episodes": 50,
+    "max_steps": 50,
+    "seed": 2000,
+    "summary": {
+      "random": {
+        "num_episodes": 50,
+        "success_rate": 0.26,
+        "mean_initial_distance": 0.14205036461353301,
+        "mean_final_distance": 0.220659156255424,
+        "mean_best_distance": 0.07807568442076444,
+        "mean_distance_improvement": 0.06397468019276857,
+        "mean_steps": 40.24
+      },
+      "smolvla_checkpoint": {
+        "num_episodes": 50,
+        "success_rate": 0.14,
+        "mean_initial_distance": 0.14205036461353301,
+        "mean_final_distance": 0.5346192828565836,
+        "mean_best_distance": 0.10754066742956639,
+        "mean_distance_improvement": 0.03450969718396664,
+        "mean_steps": 43.4
+      },
+      "zero": {
+        "num_episodes": 50,
+        "success_rate": 0.0,
+        "mean_initial_distance": 0.14205036461353301,
+        "mean_final_distance": 0.14204399563372136,
+        "mean_best_distance": 0.14177950352430344,
+        "mean_distance_improvement": 0.00027086108922958374,
+        "mean_steps": 50.0
+      }
+    }
+  }
+]

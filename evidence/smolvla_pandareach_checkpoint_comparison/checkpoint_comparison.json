@@ -1,0 +1,52 @@
+[
+  {
+    "checkpoint": "000100",
+    "status": "ok",
+    "success_rate": 0.08,
+    "mean_best_distance": 0.11742627818137408,
+    "mean_final_distance": 0.5510744562372565,
+    "mean_distance_improvement": 0.039076288305222986,
+    "mean_steps": 46.16,
+    "source": "outputs/smolvla_rollout/pandareach_chunk1_500_eval50_000100_scale1/rollout_summary.json"
+  },
+  {
+    "checkpoint": "000200",
+    "status": "ok",
+    "success_rate": 0.4,
+    "mean_best_distance": 0.06625680595636368,
+    "mean_final_distance": 0.3610537204891443,
+    "mean_distance_improvement": 0.09024576053023338,
+    "mean_steps": 31.5,
+    "source": "outputs/smolvla_rollout/pandareach_chunk1_500_eval50_000200_scale1/rollout_summary.json"
+  },
+  {
+    "checkpoint": "000300",
+    "status": "ok",
+    "success_rate": 0.4,
+    "mean_best_distance": 0.058587871231138705,
+    "mean_final_distance": 0.4438499617949128,
+    "mean_distance_improvement": 0.09791469525545836,
+    "mean_steps": 31.26,
+    "source": "outputs/smolvla_rollout/pandareach_chunk1_500_eval50_000300_scale1/rollout_summary.json"
+  },
+  {
+    "checkpoint": "000400",
+    "status": "ok",
+    "success_rate": 0.82,
+    "mean_best_distance": 0.04108792475424707,
+    "mean_final_distance": 0.15233263692818583,
+    "mean_distance_improvement": 0.11541464173235,
+    "mean_steps": 11.52,
+    "source": "outputs/smolvla_rollout/pandareach_chunk1_500_eval50_000400_scale1/rollout_summary.json"
+  },
+  {
+    "checkpoint": "000500",
+    "status": "ok",
+    "success_rate": 0.74,
+    "mean_best_distance": 0.04564100280404091,
+    "mean_final_distance": 0.22119613885879516,
+    "mean_distance_improvement": 0.11086156368255615,
+    "mean_steps": 15.3,
+    "source": "outputs/smolvla_rollout/pandareach_chunk1_500_eval50_000500_scale1/rollout_summary.json"
+  }
+]
