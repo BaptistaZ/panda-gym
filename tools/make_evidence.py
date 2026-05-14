@@ -59,13 +59,13 @@ def try_pip_freeze() -> Optional[str]:
 # -------------------------
 def load_eval_module(repo_root: Path):
     import importlib.util
-    eval_path = repo_root / "eval_reach_ppo.py"
+    eval_path = repo_root / "scripts" / "teacher" / "reach" / "eval_reach_ppo.py"
     if not eval_path.exists():
         raise FileNotFoundError(f"Não encontrei {eval_path}")
 
     spec = importlib.util.spec_from_file_location("eval_reach_ppo", str(eval_path))
     if spec is None or spec.loader is None:
-        raise RuntimeError("Falha a carregar o módulo eval_reach_ppo.py")
+        raise RuntimeError("Falha a carregar o módulo scripts/teacher/reach/eval_reach_ppo.py")
     mod = importlib.util.module_from_spec(spec)
     sys.modules["eval_reach_ppo"] = mod
     spec.loader.exec_module(mod)
