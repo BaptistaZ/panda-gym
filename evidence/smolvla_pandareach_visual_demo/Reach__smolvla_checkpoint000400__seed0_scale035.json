@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "purpose": "SmolVLA visual PandaReach-v3 MP4 demo",
+  "checkpoint": "outputs/train/smolvla_panda_reach_chunk1_500/checkpoints/000400/pretrained_model",
+  "dataset_root": "outputs/lerobot_datasets/panda_reach_ppo_teacher_50",
+  "repo_id": "local/panda_reach_ppo_teacher_50",
+  "raw_instruction": "reach the target",
+  "mapped_instruction": "reach the target",
+  "seed": 0,
+  "episodes": 1,
+  "steps_limit": 600,
+  "fps": 60,
+  "width": 720,
+  "height": 480,
+  "action_scale": 0.35,
+  "ema": 0.85,
+  "hold": 90,
+  "initial_hold": 90,
+  "success_hold": 120,
+  "renderer": "Tiny",
+  "device": "cuda",
+  "video_path": "videos/raw/PandaReach/smolvla/Reach__smolvla_checkpoint000400__seed0_scale035.mp4",
+  "episodes_detail": [
+    {
+      "episode": 0,
+      "seed": 0,
+      "steps": 5,
+      "initial_distance": 0.19759011268615723,
+      "best_distance": 0.027342896908521652,
+      "final_distance": 0.027342896908521652,
+      "distance_improvement": 0.17024721577763557,
+      "success_seen": true,
+      "trajectory": [
+        {
+          "step": 1,
+          "reward": -1.0,
+          "distance": 0.16912515461444855,
+          "is_success": false,
+          "raw_action": [
+            -0.10094546526670456,
+            -1.3935515880584717,
+            -2.0135021209716797
+          ],
+          "smoothed_action": [
+            -0.10094547271728516,
+            -1.3935517072677612,
+            -2.0135021209716797
+          ],
+          "executed_action": [
+            -0.035330913960933685,
+            -0.487743079662323,
+            -0.7047257423400879
+          ]
+        },
+        {
+          "step": 2,
+          "reward": -1.0,
+          "distance": 0.12813760340213776,
+          "is_success": false,
+          "raw_action": [
+            0.3041222095489502,
+            -0.5729956030845642,
+            -0.7199593186378479
+          ],
+          "smoothed_action": [
+            -0.04018532484769821,
+            -1.2704682350158691,
+            -1.8194706439971924
+          ],
+          "executed_action": [
+            -0.014064863324165344,
+            -0.4446638822555542,
+            -0.6368147134780884
+          ]
+        },
+        {
+          "step": 3,
+          "reward": -1.0,
+          "distance": 0.09014201164245605,
+          "is_success": false,
+          "raw_action": [
+            -0.13601800799369812,
+            -0.6719817519187927,
+            -1.6478255987167358
+          ],
+          "smoothed_action": [
+            -0.05456022918224335,
+            -1.1806952953338623,
+            -1.7937238216400146
+          ],
+          "executed_action": [
+            -0.01909608021378517,
+            -0.4132433533668518,
+            -0.6278033256530762
+          ]
+        },
+        {
+          "step": 4,
+          "reward": -1.0,
+          "distance": 0.05524764582514763,
+          "is_success": false,
+          "raw_action": [
+            0.8816949725151062,
+            0.23989936709403992,
+            -1.3287301063537598
+          ],
+          "smoothed_action": [
+            0.08587805926799774,
+            -0.9676061272621155,
+            -1.7239747047424316
+          ],
+          "executed_action": [
+            0.03005732037127018,
+            -0.33866214752197266,
+            -0.6033911108970642
+          ]
+        },
+        {
+          "step": 5,
+          "reward": -0.0,
+          "distance": 0.027342896908521652,
+          "is_success": true,
+          "raw_action": [
+            0.5684493184089661,
+            -0.4339446723461151,
+            -0.8435702323913574
+          ],
+          "smoothed_action": [
+            0.15826375782489777,
+            -0.8875569701194763,
+            -1.5919140577316284
+          ],
+          "executed_action": [
+            0.0553923137485981,
+            -0.3106449246406555,
+            -0.5571699142456055
+          ]
+        }
+      ]
+    }
+  ]
+}
