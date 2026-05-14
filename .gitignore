@@ -79,3 +79,5 @@ checkpoints/
 *.onnx
 *.engine
 *.torchscript
+# Local generated PandaPush teacher models
+models/PandaPush/ee/sac_her/

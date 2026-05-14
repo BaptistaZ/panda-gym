@@ -1,0 +1,15 @@
+{
+  "env": "PandaPush-v3",
+  "total_timesteps": 300000,
+  "seed": 0,
+  "learning_rate": 0.001,
+  "buffer_size": 1000000,
+  "batch_size": 256,
+  "gamma": 0.95,
+  "tau": 0.05,
+  "n_sampled_goal": 4,
+  "eval_every": 25000,
+  "eval_episodes": 30,
+  "output_dir": "models/PandaPush/ee/sac_her",
+  "run_dir": "models/PandaPush/ee/sac_her/pandapush-v3_sac_her_steps300000_seed0_20260514_142455"
+}
