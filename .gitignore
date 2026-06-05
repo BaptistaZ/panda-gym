@@ -81,3 +81,6 @@ checkpoints/
 *.torchscript
 # Local generated PandaPush teacher models
 models/PandaPush/ee/sac_her/
+
+# Local Hugging Face teacher models
+models/
