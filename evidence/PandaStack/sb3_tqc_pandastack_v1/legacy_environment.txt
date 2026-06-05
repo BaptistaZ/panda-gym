@@ -1,0 +1,19 @@
+Legacy environment used for reproducing sb3/tqc-PandaStack-v1
+
+Python: 3.8.20
+gym: 0.21.0
+numpy: 1.23.5
+panda-gym: 1.1.1
+stable-baselines3: 1.8.0
+sb3-contrib: 1.8.0
+torch: 2.4.1+cu121
+
+Environment: PandaStack-v1
+Wrapper: sb3_contrib.common.wrappers.TimeFeatureWrapper
+Policy: MultiInputPolicy
+Replay buffer: HerReplayBuffer
+
+Observation shape: (31,)
+Achieved goal shape: (6,)
+Desired goal shape: (6,)
+Action shape: (4,)

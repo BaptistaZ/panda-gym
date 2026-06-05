@@ -26,3 +26,8 @@ The official Hugging Face `results.json` also reports a weak deterministic evalu
 - n_eval_episodes: 10
 
 Conclusion: the model is technically executable in the correct PandaStack-v1 environment, but it is not strong enough to be used directly as a reliable teacher for generating LeRobot demonstrations for SmolVLA.
+
+Additional observation from the local evaluation:
+- The two successful episodes occurred at step 1.
+- This suggests favourable initial states rather than reliable task-solving behaviour by the policy.
+- Therefore, the 0.10 success rate should not be interpreted as evidence of a usable demonstration teacher.
