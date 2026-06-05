@@ -1,0 +1,4530 @@
+{
+  "env_id": "PandaPickAndPlace-v3",
+  "teacher": "chencliu/tqc-PandaPickAndPlace-v3",
+  "model_path": "models/PandaPickAndPlace/chencliu_tqc_PandaPickAndPlace_v3/tqc-PandaPickAndPlace-v3.zip",
+  "vec_normalize_path": "models/PandaPickAndPlace/chencliu_tqc_PandaPickAndPlace_v3/vec_normalize.pkl",
+  "task": "pick and place the cube",
+  "state_shape": [
+    25
+  ],
+  "env_action_shape": [
+    4
+  ],
+  "smolvla_action_shape": [
+    6
+  ],
+  "image_source": "env.render()",
+  "image_format": "png",
+  "episodes": 500,
+  "max_steps": 100,
+  "total_steps": 3712,
+  "success_rate": 1.0,
+  "success_count": 500,
+  "mean_steps": 7.424,
+  "mean_reward": -6.424,
+  "mean_initial_distance": 0.18140423504635692,
+  "mean_best_distance": 0.07210535959526897,
+  "mean_final_distance": 0.07213165385648608,
+  "episode_summaries": [
+    {
+      "episode": 0,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.20001107454299927,
+      "best_distance": 0.08222588896751404,
+      "final_distance": 0.08222588896751404
+    },
+    {
+      "episode": 1,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22788585722446442,
+      "best_distance": 0.06844832748174667,
+      "final_distance": 0.06844832748174667
+    },
+    {
+      "episode": 2,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2160591036081314,
+      "best_distance": 0.05952414870262146,
+      "final_distance": 0.05952414870262146
+    },
+    {
+      "episode": 3,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.15997014939785004,
+      "best_distance": 0.07813581824302673,
+      "final_distance": 0.07813581824302673
+    },
+    {
+      "episode": 4,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1798686534166336,
+      "best_distance": 0.09510309249162674,
+      "final_distance": 0.09510309249162674
+    },
+    {
+      "episode": 5,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.17869968712329865,
+      "best_distance": 0.06301801651716232,
+      "final_distance": 0.06301801651716232
+    },
+    {
+      "episode": 6,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.16827571392059326,
+      "best_distance": 0.07916180044412613,
+      "final_distance": 0.07916180044412613
+    },
+    {
+      "episode": 7,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.040233876556158066,
+      "best_distance": 0.040233876556158066,
+      "final_distance": 0.040233876556158066
+    },
+    {
+      "episode": 8,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.16483336687088013,
+      "best_distance": 0.08313382416963577,
+      "final_distance": 0.08313382416963577
+    },
+    {
+      "episode": 9,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.1338047832250595,
+      "best_distance": 0.09286390990018845,
+      "final_distance": 0.09286390990018845
+    },
+    {
+      "episode": 10,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.1044514998793602,
+      "best_distance": 0.09919475018978119,
+      "final_distance": 0.09919475018978119
+    },
+    {
+      "episode": 11,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.26203036308288574,
+      "best_distance": 0.06551678478717804,
+      "final_distance": 0.06551678478717804
+    },
+    {
+      "episode": 12,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.20782454311847687,
+      "best_distance": 0.08859943598508835,
+      "final_distance": 0.08859943598508835
+    },
+    {
+      "episode": 13,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.10494300723075867,
+      "best_distance": 0.09869184345006943,
+      "final_distance": 0.09869184345006943
+    },
+    {
+      "episode": 14,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2791556715965271,
+      "best_distance": 0.06108272075653076,
+      "final_distance": 0.06108272075653076
+    },
+    {
+      "episode": 15,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.029714221134781837,
+      "best_distance": 0.029714221134781837,
+      "final_distance": 0.029714221134781837
+    },
+    {
+      "episode": 16,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.11142946779727936,
+      "best_distance": 0.10087037831544876,
+      "final_distance": 0.10087037831544876
+    },
+    {
+      "episode": 17,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.18242201209068298,
+      "best_distance": 0.11778589338064194,
+      "final_distance": 0.11778589338064194
+    },
+    {
+      "episode": 18,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.23247668147087097,
+      "best_distance": 0.07510349899530411,
+      "final_distance": 0.07510349899530411
+    },
+    {
+      "episode": 19,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.22998592257499695,
+      "best_distance": 0.05317898467183113,
+      "final_distance": 0.05317898467183113
+    },
+    {
+      "episode": 20,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2128785401582718,
+      "best_distance": 0.055458854883909225,
+      "final_distance": 0.055458854883909225
+    },
+    {
+      "episode": 21,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.10851971060037613,
+      "best_distance": 0.05956299602985382,
+      "final_distance": 0.06658502668142319
+    },
+    {
+      "episode": 22,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.08505357056856155,
+      "best_distance": 0.05122390389442444,
+      "final_distance": 0.05122390389442444
+    },
+    {
+      "episode": 23,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.3125459551811218,
+      "best_distance": 0.07321780174970627,
+      "final_distance": 0.07321780174970627
+    },
+    {
+      "episode": 24,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.24191701412200928,
+      "best_distance": 0.07475675642490387,
+      "final_distance": 0.07475675642490387
+    },
+    {
+      "episode": 25,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.26835593581199646,
+      "best_distance": 0.09665718674659729,
+      "final_distance": 0.09665718674659729
+    },
+    {
+      "episode": 26,
+      "success": true,
+      "steps": 13,
+      "reward": -12.0,
+      "initial_distance": 0.27219247817993164,
+      "best_distance": 0.06612157076597214,
+      "final_distance": 0.06612157076597214
+    },
+    {
+      "episode": 27,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.15016904473304749,
+      "best_distance": 0.0654548779129982,
+      "final_distance": 0.0654548779129982
+    },
+    {
+      "episode": 28,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.24847596883773804,
+      "best_distance": 0.09365756809711456,
+      "final_distance": 0.09365756809711456
+    },
+    {
+      "episode": 29,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.21373730897903442,
+      "best_distance": 0.09149999916553497,
+      "final_distance": 0.09149999916553497
+    },
+    {
+      "episode": 30,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.09397242218255997,
+      "best_distance": 0.07459233701229095,
+      "final_distance": 0.07459233701229095
+    },
+    {
+      "episode": 31,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1600072830915451,
+      "best_distance": 0.0629841536283493,
+      "final_distance": 0.0629841536283493
+    },
+    {
+      "episode": 32,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.20041805505752563,
+      "best_distance": 0.050526782870292664,
+      "final_distance": 0.050526782870292664
+    },
+    {
+      "episode": 33,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22159443795681,
+      "best_distance": 0.05775510519742966,
+      "final_distance": 0.05775510519742966
+    },
+    {
+      "episode": 34,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.14810487627983093,
+      "best_distance": 0.10805045068264008,
+      "final_distance": 0.10805045068264008
+    },
+    {
+      "episode": 35,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1380888968706131,
+      "best_distance": 0.07825987786054611,
+      "final_distance": 0.07825987786054611
+    },
+    {
+      "episode": 36,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.30406373739242554,
+      "best_distance": 0.08976546674966812,
+      "final_distance": 0.08976546674966812
+    },
+    {
+      "episode": 37,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.13275116682052612,
+      "best_distance": 0.07723118364810944,
+      "final_distance": 0.07723118364810944
+    },
+    {
+      "episode": 38,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.14151057600975037,
+      "best_distance": 0.09823424369096756,
+      "final_distance": 0.09823424369096756
+    },
+    {
+      "episode": 39,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.15772318840026855,
+      "best_distance": 0.07760196924209595,
+      "final_distance": 0.07760196924209595
+    },
+    {
+      "episode": 40,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2888930141925812,
+      "best_distance": 0.060896798968315125,
+      "final_distance": 0.060896798968315125
+    },
+    {
+      "episode": 41,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.21568305790424347,
+      "best_distance": 0.07716566324234009,
+      "final_distance": 0.07716566324234009
+    },
+    {
+      "episode": 42,
+      "success": true,
+      "steps": 11,
+      "reward": -10.0,
+      "initial_distance": 0.3088632822036743,
+      "best_distance": 0.06816975772380829,
+      "final_distance": 0.06816975772380829
+    },
+    {
+      "episode": 43,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2174234688282013,
+      "best_distance": 0.06201009824872017,
+      "final_distance": 0.06201009824872017
+    },
+    {
+      "episode": 44,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.06718745082616806,
+      "best_distance": 0.059267133474349976,
+      "final_distance": 0.059267133474349976
+    },
+    {
+      "episode": 45,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.06251736730337143,
+      "best_distance": 0.05447568744421005,
+      "final_distance": 0.05447568744421005
+    },
+    {
+      "episode": 46,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.18121437728405,
+      "best_distance": 0.06706970185041428,
+      "final_distance": 0.06706970185041428
+    },
+    {
+      "episode": 47,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.14826814830303192,
+      "best_distance": 0.05053851753473282,
+      "final_distance": 0.05053851753473282
+    },
+    {
+      "episode": 48,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.10250631719827652,
+      "best_distance": 0.05695853754878044,
+      "final_distance": 0.05695853754878044
+    },
+    {
+      "episode": 49,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.3140650987625122,
+      "best_distance": 0.05394349992275238,
+      "final_distance": 0.05394349992275238
+    },
+    {
+      "episode": 50,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.18434607982635498,
+      "best_distance": 0.07702352851629257,
+      "final_distance": 0.07702352851629257
+    },
+    {
+      "episode": 51,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.25922051072120667,
+      "best_distance": 0.0742800310254097,
+      "final_distance": 0.0742800310254097
+    },
+    {
+      "episode": 52,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.17810137569904327,
+      "best_distance": 0.05214449763298035,
+      "final_distance": 0.05214449763298035
+    },
+    {
+      "episode": 53,
+      "success": true,
+      "steps": 4,
+      "reward": -3.0,
+      "initial_distance": 0.056657370179891586,
+      "best_distance": 0.056657370179891586,
+      "final_distance": 0.05665772780776024
+    },
+    {
+      "episode": 54,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.16172929108142853,
+      "best_distance": 0.06722892075777054,
+      "final_distance": 0.06722892075777054
+    },
+    {
+      "episode": 55,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.16300231218338013,
+      "best_distance": 0.10014638304710388,
+      "final_distance": 0.10014638304710388
+    },
+    {
+      "episode": 56,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.19558455049991608,
+      "best_distance": 0.08036469668149948,
+      "final_distance": 0.08036469668149948
+    },
+    {
+      "episode": 57,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2083003669977188,
+      "best_distance": 0.06086312606930733,
+      "final_distance": 0.06086312606930733
+    },
+    {
+      "episode": 58,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.31939005851745605,
+      "best_distance": 0.0882405936717987,
+      "final_distance": 0.0882405936717987
+    },
+    {
+      "episode": 59,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.3595640957355499,
+      "best_distance": 0.08465753495693207,
+      "final_distance": 0.08465753495693207
+    },
+    {
+      "episode": 60,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.16270789504051208,
+      "best_distance": 0.058186959475278854,
+      "final_distance": 0.058186959475278854
+    },
+    {
+      "episode": 61,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.16228678822517395,
+      "best_distance": 0.0528489425778389,
+      "final_distance": 0.0528489425778389
+    },
+    {
+      "episode": 62,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.29333364963531494,
+      "best_distance": 0.08584842085838318,
+      "final_distance": 0.08584842085838318
+    },
+    {
+      "episode": 63,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1264449954032898,
+      "best_distance": 0.08217938989400864,
+      "final_distance": 0.08217938989400864
+    },
+    {
+      "episode": 64,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.25744152069091797,
+      "best_distance": 0.080628901720047,
+      "final_distance": 0.080628901720047
+    },
+    {
+      "episode": 65,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.16303709149360657,
+      "best_distance": 0.06397337466478348,
+      "final_distance": 0.06397337466478348
+    },
+    {
+      "episode": 66,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2512659728527069,
+      "best_distance": 0.055483922362327576,
+      "final_distance": 0.055483922362327576
+    },
+    {
+      "episode": 67,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.28893619775772095,
+      "best_distance": 0.05086003616452217,
+      "final_distance": 0.05086003616452217
+    },
+    {
+      "episode": 68,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.17255596816539764,
+      "best_distance": 0.07724595814943314,
+      "final_distance": 0.07724595814943314
+    },
+    {
+      "episode": 69,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.2636914849281311,
+      "best_distance": 0.09277476370334625,
+      "final_distance": 0.09277476370334625
+    },
+    {
+      "episode": 70,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.18631874024868011,
+      "best_distance": 0.08744435757398605,
+      "final_distance": 0.08744435757398605
+    },
+    {
+      "episode": 71,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.18693700432777405,
+      "best_distance": 0.08280137181282043,
+      "final_distance": 0.08280137181282043
+    },
+    {
+      "episode": 72,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.15298931300640106,
+      "best_distance": 0.052489038556814194,
+      "final_distance": 0.052489038556814194
+    },
+    {
+      "episode": 73,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.23484884202480316,
+      "best_distance": 0.07291822880506516,
+      "final_distance": 0.07291822880506516
+    },
+    {
+      "episode": 74,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.21017862856388092,
+      "best_distance": 0.08126913756132126,
+      "final_distance": 0.08126913756132126
+    },
+    {
+      "episode": 75,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.11762252449989319,
+      "best_distance": 0.10687071084976196,
+      "final_distance": 0.10687071084976196
+    },
+    {
+      "episode": 76,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2149072140455246,
+      "best_distance": 0.054418157786130905,
+      "final_distance": 0.054418157786130905
+    },
+    {
+      "episode": 77,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.04523710533976555,
+      "best_distance": 0.04523710533976555,
+      "final_distance": 0.04523710533976555
+    },
+    {
+      "episode": 78,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.03168550133705139,
+      "best_distance": 0.03168550133705139,
+      "final_distance": 0.03168550133705139
+    },
+    {
+      "episode": 79,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.23881559073925018,
+      "best_distance": 0.08460202813148499,
+      "final_distance": 0.08460202813148499
+    },
+    {
+      "episode": 80,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.10905906558036804,
+      "best_distance": 0.07725904881954193,
+      "final_distance": 0.07725904881954193
+    },
+    {
+      "episode": 81,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2842528522014618,
+      "best_distance": 0.08334220945835114,
+      "final_distance": 0.08334220945835114
+    },
+    {
+      "episode": 82,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.20338305830955505,
+      "best_distance": 0.0958809182047844,
+      "final_distance": 0.0958809182047844
+    },
+    {
+      "episode": 83,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22639387845993042,
+      "best_distance": 0.06937138736248016,
+      "final_distance": 0.06937138736248016
+    },
+    {
+      "episode": 84,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.07808220386505127,
+      "best_distance": 0.05786360427737236,
+      "final_distance": 0.05786360427737236
+    },
+    {
+      "episode": 85,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.24797113239765167,
+      "best_distance": 0.09107153862714767,
+      "final_distance": 0.09107153862714767
+    },
+    {
+      "episode": 86,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.18869894742965698,
+      "best_distance": 0.11250191181898117,
+      "final_distance": 0.11250191181898117
+    },
+    {
+      "episode": 87,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.10174773633480072,
+      "best_distance": 0.05920511111617088,
+      "final_distance": 0.05920511111617088
+    },
+    {
+      "episode": 88,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.22763124108314514,
+      "best_distance": 0.05168205872178078,
+      "final_distance": 0.05168205872178078
+    },
+    {
+      "episode": 89,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.25938311219215393,
+      "best_distance": 0.05853012576699257,
+      "final_distance": 0.05853012576699257
+    },
+    {
+      "episode": 90,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.19667133688926697,
+      "best_distance": 0.08294117450714111,
+      "final_distance": 0.08294117450714111
+    },
+    {
+      "episode": 91,
+      "success": true,
+      "steps": 4,
+      "reward": -3.0,
+      "initial_distance": 0.050448622554540634,
+      "best_distance": 0.050448622554540634,
+      "final_distance": 0.05045222491025925
+    },
+    {
+      "episode": 92,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1977536678314209,
+      "best_distance": 0.05827276408672333,
+      "final_distance": 0.05827276408672333
+    },
+    {
+      "episode": 93,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.15528254210948944,
+      "best_distance": 0.07102230191230774,
+      "final_distance": 0.07102230191230774
+    },
+    {
+      "episode": 94,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.13201534748077393,
+      "best_distance": 0.09706435352563858,
+      "final_distance": 0.09706435352563858
+    },
+    {
+      "episode": 95,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.24636310338974,
+      "best_distance": 0.061503343284130096,
+      "final_distance": 0.061503343284130096
+    },
+    {
+      "episode": 96,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.23111064732074738,
+      "best_distance": 0.0813208520412445,
+      "final_distance": 0.0813208520412445
+    },
+    {
+      "episode": 97,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.17942045629024506,
+      "best_distance": 0.05629763379693031,
+      "final_distance": 0.05629763379693031
+    },
+    {
+      "episode": 98,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.3165244162082672,
+      "best_distance": 0.09173109382390976,
+      "final_distance": 0.09173109382390976
+    },
+    {
+      "episode": 99,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1901899129152298,
+      "best_distance": 0.08922527730464935,
+      "final_distance": 0.08922527730464935
+    },
+    {
+      "episode": 100,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.08639544993638992,
+      "best_distance": 0.07361045479774475,
+      "final_distance": 0.07361045479774475
+    },
+    {
+      "episode": 101,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.26255929470062256,
+      "best_distance": 0.08152180165052414,
+      "final_distance": 0.08152180165052414
+    },
+    {
+      "episode": 102,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.0943949893116951,
+      "best_distance": 0.052734024822711945,
+      "final_distance": 0.052734024822711945
+    },
+    {
+      "episode": 103,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.17908960580825806,
+      "best_distance": 0.05289943888783455,
+      "final_distance": 0.05289943888783455
+    },
+    {
+      "episode": 104,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.2328397035598755,
+      "best_distance": 0.10268428176641464,
+      "final_distance": 0.10268428176641464
+    },
+    {
+      "episode": 105,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1224622055888176,
+      "best_distance": 0.08772332221269608,
+      "final_distance": 0.08772332221269608
+    },
+    {
+      "episode": 106,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.11235193908214569,
+      "best_distance": 0.1057383194565773,
+      "final_distance": 0.1057383194565773
+    },
+    {
+      "episode": 107,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2475089728832245,
+      "best_distance": 0.07335183769464493,
+      "final_distance": 0.07335183769464493
+    },
+    {
+      "episode": 108,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.20098677277565002,
+      "best_distance": 0.07567474246025085,
+      "final_distance": 0.07567474246025085
+    },
+    {
+      "episode": 109,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.20212186872959137,
+      "best_distance": 0.09049586951732635,
+      "final_distance": 0.09049586951732635
+    },
+    {
+      "episode": 110,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.20923836529254913,
+      "best_distance": 0.06207661330699921,
+      "final_distance": 0.06207661330699921
+    },
+    {
+      "episode": 111,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2972254455089569,
+      "best_distance": 0.06894325464963913,
+      "final_distance": 0.06894325464963913
+    },
+    {
+      "episode": 112,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.20643360912799835,
+      "best_distance": 0.07766243070363998,
+      "final_distance": 0.07766243070363998
+    },
+    {
+      "episode": 113,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.19264791905879974,
+      "best_distance": 0.07182207703590393,
+      "final_distance": 0.07182207703590393
+    },
+    {
+      "episode": 114,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.028076939284801483,
+      "best_distance": 0.028076939284801483,
+      "final_distance": 0.028076939284801483
+    },
+    {
+      "episode": 115,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.25471916794776917,
+      "best_distance": 0.0850781798362732,
+      "final_distance": 0.0850781798362732
+    },
+    {
+      "episode": 116,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.10763073712587357,
+      "best_distance": 0.07106689363718033,
+      "final_distance": 0.07106689363718033
+    },
+    {
+      "episode": 117,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.20596086978912354,
+      "best_distance": 0.05307625234127045,
+      "final_distance": 0.05307625234127045
+    },
+    {
+      "episode": 118,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.13723008334636688,
+      "best_distance": 0.06729087233543396,
+      "final_distance": 0.06729087233543396
+    },
+    {
+      "episode": 119,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.264377236366272,
+      "best_distance": 0.07480305433273315,
+      "final_distance": 0.07480305433273315
+    },
+    {
+      "episode": 120,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1512937843799591,
+      "best_distance": 0.07934693992137909,
+      "final_distance": 0.07934693992137909
+    },
+    {
+      "episode": 121,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22641214728355408,
+      "best_distance": 0.07702905684709549,
+      "final_distance": 0.07702905684709549
+    },
+    {
+      "episode": 122,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.32078418135643005,
+      "best_distance": 0.09083835035562515,
+      "final_distance": 0.09083835035562515
+    },
+    {
+      "episode": 123,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.28887370228767395,
+      "best_distance": 0.05618437007069588,
+      "final_distance": 0.05618437007069588
+    },
+    {
+      "episode": 124,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.06806892901659012,
+      "best_distance": 0.056134484708309174,
+      "final_distance": 0.056134484708309174
+    },
+    {
+      "episode": 125,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.224910706281662,
+      "best_distance": 0.09687283635139465,
+      "final_distance": 0.09687283635139465
+    },
+    {
+      "episode": 126,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.15357062220573425,
+      "best_distance": 0.09317917376756668,
+      "final_distance": 0.09317917376756668
+    },
+    {
+      "episode": 127,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2893035113811493,
+      "best_distance": 0.09499603509902954,
+      "final_distance": 0.09499603509902954
+    },
+    {
+      "episode": 128,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.23819296061992645,
+      "best_distance": 0.06421604007482529,
+      "final_distance": 0.06421604007482529
+    },
+    {
+      "episode": 129,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.12979990243911743,
+      "best_distance": 0.05894457548856735,
+      "final_distance": 0.05894457548856735
+    },
+    {
+      "episode": 130,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.027752386406064034,
+      "best_distance": 0.027752386406064034,
+      "final_distance": 0.027752386406064034
+    },
+    {
+      "episode": 131,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.10618382692337036,
+      "best_distance": 0.07165750116109848,
+      "final_distance": 0.07165750116109848
+    },
+    {
+      "episode": 132,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1922321617603302,
+      "best_distance": 0.08766128122806549,
+      "final_distance": 0.08766128122806549
+    },
+    {
+      "episode": 133,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.23034264147281647,
+      "best_distance": 0.06908652931451797,
+      "final_distance": 0.06908652931451797
+    },
+    {
+      "episode": 134,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.30969005823135376,
+      "best_distance": 0.06525736302137375,
+      "final_distance": 0.06525736302137375
+    },
+    {
+      "episode": 135,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.09468702226877213,
+      "best_distance": 0.06573642045259476,
+      "final_distance": 0.06573642045259476
+    },
+    {
+      "episode": 136,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.23365722596645355,
+      "best_distance": 0.06367079168558121,
+      "final_distance": 0.06367079168558121
+    },
+    {
+      "episode": 137,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.16878019273281097,
+      "best_distance": 0.08104826509952545,
+      "final_distance": 0.08104826509952545
+    },
+    {
+      "episode": 138,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.06420915573835373,
+      "best_distance": 0.06202971562743187,
+      "final_distance": 0.06202971562743187
+    },
+    {
+      "episode": 139,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.14740830659866333,
+      "best_distance": 0.06674046814441681,
+      "final_distance": 0.06674046814441681
+    },
+    {
+      "episode": 140,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1773427128791809,
+      "best_distance": 0.08029209822416306,
+      "final_distance": 0.08029209822416306
+    },
+    {
+      "episode": 141,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.17290782928466797,
+      "best_distance": 0.06084797903895378,
+      "final_distance": 0.06084797903895378
+    },
+    {
+      "episode": 142,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.2531939148902893,
+      "best_distance": 0.11459257453680038,
+      "final_distance": 0.11459257453680038
+    },
+    {
+      "episode": 143,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.03105873055756092,
+      "best_distance": 0.03105873055756092,
+      "final_distance": 0.03105873055756092
+    },
+    {
+      "episode": 144,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.15130801498889923,
+      "best_distance": 0.06252019107341766,
+      "final_distance": 0.06252019107341766
+    },
+    {
+      "episode": 145,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.15155483782291412,
+      "best_distance": 0.055770955979824066,
+      "final_distance": 0.055770955979824066
+    },
+    {
+      "episode": 146,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.25824740529060364,
+      "best_distance": 0.08088194578886032,
+      "final_distance": 0.08088194578886032
+    },
+    {
+      "episode": 147,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1636689007282257,
+      "best_distance": 0.05314284935593605,
+      "final_distance": 0.05314284935593605
+    },
+    {
+      "episode": 148,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.252291202545166,
+      "best_distance": 0.07084371149539948,
+      "final_distance": 0.07084371149539948
+    },
+    {
+      "episode": 149,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.18665270507335663,
+      "best_distance": 0.06932462006807327,
+      "final_distance": 0.06932462006807327
+    },
+    {
+      "episode": 150,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.031805068254470825,
+      "best_distance": 0.031805068254470825,
+      "final_distance": 0.031805068254470825
+    },
+    {
+      "episode": 151,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1512172371149063,
+      "best_distance": 0.09020733833312988,
+      "final_distance": 0.09020733833312988
+    },
+    {
+      "episode": 152,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.17799219489097595,
+      "best_distance": 0.06841270625591278,
+      "final_distance": 0.06841270625591278
+    },
+    {
+      "episode": 153,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.14513246715068817,
+      "best_distance": 0.0988161712884903,
+      "final_distance": 0.0988161712884903
+    },
+    {
+      "episode": 154,
+      "success": true,
+      "steps": 4,
+      "reward": -3.0,
+      "initial_distance": 0.07201103121042252,
+      "best_distance": 0.07201074063777924,
+      "final_distance": 0.07201145589351654
+    },
+    {
+      "episode": 155,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.07253077626228333,
+      "best_distance": 0.061974626034498215,
+      "final_distance": 0.061974626034498215
+    },
+    {
+      "episode": 156,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.21511784195899963,
+      "best_distance": 0.05007912591099739,
+      "final_distance": 0.05007912591099739
+    },
+    {
+      "episode": 157,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.15792424976825714,
+      "best_distance": 0.08993663638830185,
+      "final_distance": 0.08993663638830185
+    },
+    {
+      "episode": 158,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.20267009735107422,
+      "best_distance": 0.08551480621099472,
+      "final_distance": 0.08551480621099472
+    },
+    {
+      "episode": 159,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.10753102600574493,
+      "best_distance": 0.07540103048086166,
+      "final_distance": 0.07540103048086166
+    },
+    {
+      "episode": 160,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.1730024367570877,
+      "best_distance": 0.055614810436964035,
+      "final_distance": 0.055614810436964035
+    },
+    {
+      "episode": 161,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.22137686610221863,
+      "best_distance": 0.0816110372543335,
+      "final_distance": 0.0816110372543335
+    },
+    {
+      "episode": 162,
+      "success": true,
+      "steps": 15,
+      "reward": -14.0,
+      "initial_distance": 0.25346875190734863,
+      "best_distance": 0.05296597629785538,
+      "final_distance": 0.05774076655507088
+    },
+    {
+      "episode": 163,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.17969045042991638,
+      "best_distance": 0.10079897940158844,
+      "final_distance": 0.10079897940158844
+    },
+    {
+      "episode": 164,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1566322296857834,
+      "best_distance": 0.06359326839447021,
+      "final_distance": 0.06359326839447021
+    },
+    {
+      "episode": 165,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22089026868343353,
+      "best_distance": 0.06573021411895752,
+      "final_distance": 0.06573021411895752
+    },
+    {
+      "episode": 166,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.10846100002527237,
+      "best_distance": 0.07407353818416595,
+      "final_distance": 0.07407353818416595
+    },
+    {
+      "episode": 167,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.028539910912513733,
+      "best_distance": 0.028539910912513733,
+      "final_distance": 0.028539910912513733
+    },
+    {
+      "episode": 168,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2570042908191681,
+      "best_distance": 0.07307127118110657,
+      "final_distance": 0.07307127118110657
+    },
+    {
+      "episode": 169,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2913098633289337,
+      "best_distance": 0.08960340172052383,
+      "final_distance": 0.08960340172052383
+    },
+    {
+      "episode": 170,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.028734076768159866,
+      "best_distance": 0.028734076768159866,
+      "final_distance": 0.028734076768159866
+    },
+    {
+      "episode": 171,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.12029631435871124,
+      "best_distance": 0.09929793328046799,
+      "final_distance": 0.09929793328046799
+    },
+    {
+      "episode": 172,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1650632917881012,
+      "best_distance": 0.1118524894118309,
+      "final_distance": 0.1118524894118309
+    },
+    {
+      "episode": 173,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.022593211382627487,
+      "best_distance": 0.022593211382627487,
+      "final_distance": 0.022593211382627487
+    },
+    {
+      "episode": 174,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.2324330061674118,
+      "best_distance": 0.09771273285150528,
+      "final_distance": 0.09771273285150528
+    },
+    {
+      "episode": 175,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2236650139093399,
+      "best_distance": 0.09843198955059052,
+      "final_distance": 0.09843198955059052
+    },
+    {
+      "episode": 176,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2655099928379059,
+      "best_distance": 0.07602517306804657,
+      "final_distance": 0.07602517306804657
+    },
+    {
+      "episode": 177,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.14394615590572357,
+      "best_distance": 0.051272012293338776,
+      "final_distance": 0.051272012293338776
+    },
+    {
+      "episode": 178,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.04936983808875084,
+      "best_distance": 0.04936983808875084,
+      "final_distance": 0.04936983808875084
+    },
+    {
+      "episode": 179,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.19351887702941895,
+      "best_distance": 0.07126430422067642,
+      "final_distance": 0.07126430422067642
+    },
+    {
+      "episode": 180,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.24424032866954803,
+      "best_distance": 0.06895137578248978,
+      "final_distance": 0.06895137578248978
+    },
+    {
+      "episode": 181,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.23257477581501007,
+      "best_distance": 0.07799585163593292,
+      "final_distance": 0.07799585163593292
+    },
+    {
+      "episode": 182,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2793138921260834,
+      "best_distance": 0.0824829488992691,
+      "final_distance": 0.0824829488992691
+    },
+    {
+      "episode": 183,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.24415522813796997,
+      "best_distance": 0.09667347371578217,
+      "final_distance": 0.09667347371578217
+    },
+    {
+      "episode": 184,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.08430804312229156,
+      "best_distance": 0.08031409978866577,
+      "final_distance": 0.08031409978866577
+    },
+    {
+      "episode": 185,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2525564730167389,
+      "best_distance": 0.051512062549591064,
+      "final_distance": 0.051512062549591064
+    },
+    {
+      "episode": 186,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.11545652896165848,
+      "best_distance": 0.08592682331800461,
+      "final_distance": 0.08592682331800461
+    },
+    {
+      "episode": 187,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.09847981482744217,
+      "best_distance": 0.05244312435388565,
+      "final_distance": 0.05244312435388565
+    },
+    {
+      "episode": 188,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2939002811908722,
+      "best_distance": 0.05048353970050812,
+      "final_distance": 0.05048353970050812
+    },
+    {
+      "episode": 189,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.21498045325279236,
+      "best_distance": 0.08553386479616165,
+      "final_distance": 0.08553386479616165
+    },
+    {
+      "episode": 190,
+      "success": true,
+      "steps": 4,
+      "reward": -3.0,
+      "initial_distance": 0.05616084858775139,
+      "best_distance": 0.05616084858775139,
+      "final_distance": 0.05616319179534912
+    },
+    {
+      "episode": 191,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.18308056890964508,
+      "best_distance": 0.0931103378534317,
+      "final_distance": 0.0931103378534317
+    },
+    {
+      "episode": 192,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1259394884109497,
+      "best_distance": 0.05404230207204819,
+      "final_distance": 0.05404230207204819
+    },
+    {
+      "episode": 193,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.18306806683540344,
+      "best_distance": 0.06519556045532227,
+      "final_distance": 0.06519556045532227
+    },
+    {
+      "episode": 194,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.10779741406440735,
+      "best_distance": 0.059127409011125565,
+      "final_distance": 0.059127409011125565
+    },
+    {
+      "episode": 195,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.10000317543745041,
+      "best_distance": 0.07539614289999008,
+      "final_distance": 0.07539614289999008
+    },
+    {
+      "episode": 196,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1415759027004242,
+      "best_distance": 0.07776078581809998,
+      "final_distance": 0.07776078581809998
+    },
+    {
+      "episode": 197,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.22072279453277588,
+      "best_distance": 0.08658509701490402,
+      "final_distance": 0.08658509701490402
+    },
+    {
+      "episode": 198,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.1880042403936386,
+      "best_distance": 0.05058611184358597,
+      "final_distance": 0.05058611184358597
+    },
+    {
+      "episode": 199,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.17776285111904144,
+      "best_distance": 0.06797529757022858,
+      "final_distance": 0.06797529757022858
+    },
+    {
+      "episode": 200,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.18782904744148254,
+      "best_distance": 0.06721920520067215,
+      "final_distance": 0.06721920520067215
+    },
+    {
+      "episode": 201,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.187196746468544,
+      "best_distance": 0.06806395947933197,
+      "final_distance": 0.06806395947933197
+    },
+    {
+      "episode": 202,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.18935370445251465,
+      "best_distance": 0.08148941397666931,
+      "final_distance": 0.08148941397666931
+    },
+    {
+      "episode": 203,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.21322853863239288,
+      "best_distance": 0.08528021723031998,
+      "final_distance": 0.08528021723031998
+    },
+    {
+      "episode": 204,
+      "success": true,
+      "steps": 4,
+      "reward": -3.0,
+      "initial_distance": 0.08105194568634033,
+      "best_distance": 0.08105194568634033,
+      "final_distance": 0.08105269819498062
+    },
+    {
+      "episode": 205,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1710558980703354,
+      "best_distance": 0.062163371592760086,
+      "final_distance": 0.062163371592760086
+    },
+    {
+      "episode": 206,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.25905686616897583,
+      "best_distance": 0.05407916381955147,
+      "final_distance": 0.05407916381955147
+    },
+    {
+      "episode": 207,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.11588671058416367,
+      "best_distance": 0.1066223680973053,
+      "final_distance": 0.1066223680973053
+    },
+    {
+      "episode": 208,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1959504336118698,
+      "best_distance": 0.09092740714550018,
+      "final_distance": 0.09092740714550018
+    },
+    {
+      "episode": 209,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1999340057373047,
+      "best_distance": 0.05239162966609001,
+      "final_distance": 0.05239162966609001
+    },
+    {
+      "episode": 210,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.17649289965629578,
+      "best_distance": 0.05432236194610596,
+      "final_distance": 0.05432236194610596
+    },
+    {
+      "episode": 211,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.10716324299573898,
+      "best_distance": 0.05893339589238167,
+      "final_distance": 0.05893339589238167
+    },
+    {
+      "episode": 212,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.23614704608917236,
+      "best_distance": 0.09960344433784485,
+      "final_distance": 0.09960344433784485
+    },
+    {
+      "episode": 213,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.094622902572155,
+      "best_distance": 0.0856948047876358,
+      "final_distance": 0.0856948047876358
+    },
+    {
+      "episode": 214,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.298347145318985,
+      "best_distance": 0.06692703813314438,
+      "final_distance": 0.06692703813314438
+    },
+    {
+      "episode": 215,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.12890993058681488,
+      "best_distance": 0.08209997415542603,
+      "final_distance": 0.08209997415542603
+    },
+    {
+      "episode": 216,
+      "success": true,
+      "steps": 4,
+      "reward": -3.0,
+      "initial_distance": 0.052104853093624115,
+      "best_distance": 0.05210445448756218,
+      "final_distance": 0.05210508406162262
+    },
+    {
+      "episode": 217,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.11318770796060562,
+      "best_distance": 0.10277613997459412,
+      "final_distance": 0.10277613997459412
+    },
+    {
+      "episode": 218,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.03327690809965134,
+      "best_distance": 0.03327690809965134,
+      "final_distance": 0.03327690809965134
+    },
+    {
+      "episode": 219,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2664668560028076,
+      "best_distance": 0.08485196530818939,
+      "final_distance": 0.08485196530818939
+    },
+    {
+      "episode": 220,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.18570208549499512,
+      "best_distance": 0.05480775609612465,
+      "final_distance": 0.05480775609612465
+    },
+    {
+      "episode": 221,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1160271167755127,
+      "best_distance": 0.05897750332951546,
+      "final_distance": 0.05897750332951546
+    },
+    {
+      "episode": 222,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.13819323480129242,
+      "best_distance": 0.054081618785858154,
+      "final_distance": 0.054081618785858154
+    },
+    {
+      "episode": 223,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.30182114243507385,
+      "best_distance": 0.07555099576711655,
+      "final_distance": 0.07555099576711655
+    },
+    {
+      "episode": 224,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1449108123779297,
+      "best_distance": 0.08197697252035141,
+      "final_distance": 0.08197697252035141
+    },
+    {
+      "episode": 225,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.3169933259487152,
+      "best_distance": 0.05864967405796051,
+      "final_distance": 0.05864967405796051
+    },
+    {
+      "episode": 226,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.246124267578125,
+      "best_distance": 0.08471109718084335,
+      "final_distance": 0.08471109718084335
+    },
+    {
+      "episode": 227,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22865721583366394,
+      "best_distance": 0.05184342339634895,
+      "final_distance": 0.05184342339634895
+    },
+    {
+      "episode": 228,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.11896778643131256,
+      "best_distance": 0.07651743292808533,
+      "final_distance": 0.07651743292808533
+    },
+    {
+      "episode": 229,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.17260099947452545,
+      "best_distance": 0.0627409964799881,
+      "final_distance": 0.0627409964799881
+    },
+    {
+      "episode": 230,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.23781390488147736,
+      "best_distance": 0.08732695132493973,
+      "final_distance": 0.08732695132493973
+    },
+    {
+      "episode": 231,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.16008612513542175,
+      "best_distance": 0.079519122838974,
+      "final_distance": 0.079519122838974
+    },
+    {
+      "episode": 232,
+      "success": true,
+      "steps": 13,
+      "reward": -12.0,
+      "initial_distance": 0.2005131095647812,
+      "best_distance": 0.05320324748754501,
+      "final_distance": 0.05320324748754501
+    },
+    {
+      "episode": 233,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1820022314786911,
+      "best_distance": 0.0884004756808281,
+      "final_distance": 0.0884004756808281
+    },
+    {
+      "episode": 234,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.19178979098796844,
+      "best_distance": 0.0863197073340416,
+      "final_distance": 0.0863197073340416
+    },
+    {
+      "episode": 235,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2994510531425476,
+      "best_distance": 0.061813510954380035,
+      "final_distance": 0.061813510954380035
+    },
+    {
+      "episode": 236,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.3423002064228058,
+      "best_distance": 0.09974747151136398,
+      "final_distance": 0.09974747151136398
+    },
+    {
+      "episode": 237,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.17209693789482117,
+      "best_distance": 0.07865222543478012,
+      "final_distance": 0.07865222543478012
+    },
+    {
+      "episode": 238,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.12007570266723633,
+      "best_distance": 0.06874600797891617,
+      "final_distance": 0.06874600797891617
+    },
+    {
+      "episode": 239,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.11826415359973907,
+      "best_distance": 0.09197182208299637,
+      "final_distance": 0.09197182208299637
+    },
+    {
+      "episode": 240,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.20505385100841522,
+      "best_distance": 0.07486860454082489,
+      "final_distance": 0.07486860454082489
+    },
+    {
+      "episode": 241,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.225274458527565,
+      "best_distance": 0.06653598695993423,
+      "final_distance": 0.06653598695993423
+    },
+    {
+      "episode": 242,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.20112304389476776,
+      "best_distance": 0.05125429481267929,
+      "final_distance": 0.05125429481267929
+    },
+    {
+      "episode": 243,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.19123634696006775,
+      "best_distance": 0.06957129389047623,
+      "final_distance": 0.06957129389047623
+    },
+    {
+      "episode": 244,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.24149873852729797,
+      "best_distance": 0.09925654530525208,
+      "final_distance": 0.09925654530525208
+    },
+    {
+      "episode": 245,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.1951163411140442,
+      "best_distance": 0.07740945369005203,
+      "final_distance": 0.07740945369005203
+    },
+    {
+      "episode": 246,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.10011065006256104,
+      "best_distance": 0.09228313714265823,
+      "final_distance": 0.09228313714265823
+    },
+    {
+      "episode": 247,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.20983746647834778,
+      "best_distance": 0.05960167571902275,
+      "final_distance": 0.05960167571902275
+    },
+    {
+      "episode": 248,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.139155313372612,
+      "best_distance": 0.08382164686918259,
+      "final_distance": 0.08382164686918259
+    },
+    {
+      "episode": 249,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2757215201854706,
+      "best_distance": 0.06937213987112045,
+      "final_distance": 0.06937213987112045
+    },
+    {
+      "episode": 250,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.11816862225532532,
+      "best_distance": 0.05763573199510574,
+      "final_distance": 0.05763573199510574
+    },
+    {
+      "episode": 251,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.24020379781723022,
+      "best_distance": 0.07576438784599304,
+      "final_distance": 0.07576438784599304
+    },
+    {
+      "episode": 252,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.1743851751089096,
+      "best_distance": 0.05389908701181412,
+      "final_distance": 0.05389908701181412
+    },
+    {
+      "episode": 253,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.025793928653001785,
+      "best_distance": 0.025793928653001785,
+      "final_distance": 0.025793928653001785
+    },
+    {
+      "episode": 254,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1635933667421341,
+      "best_distance": 0.06408382207155228,
+      "final_distance": 0.06408382207155228
+    },
+    {
+      "episode": 255,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.14552868902683258,
+      "best_distance": 0.06136607006192207,
+      "final_distance": 0.06136607006192207
+    },
+    {
+      "episode": 256,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.12857159972190857,
+      "best_distance": 0.08037945628166199,
+      "final_distance": 0.08037945628166199
+    },
+    {
+      "episode": 257,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.08879086375236511,
+      "best_distance": 0.05337587743997574,
+      "final_distance": 0.05337587743997574
+    },
+    {
+      "episode": 258,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.2012190967798233,
+      "best_distance": 0.08347868919372559,
+      "final_distance": 0.08347868919372559
+    },
+    {
+      "episode": 259,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2494032233953476,
+      "best_distance": 0.07093482464551926,
+      "final_distance": 0.07093482464551926
+    },
+    {
+      "episode": 260,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.23620310425758362,
+      "best_distance": 0.09127586334943771,
+      "final_distance": 0.09127586334943771
+    },
+    {
+      "episode": 261,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1793171912431717,
+      "best_distance": 0.06718505918979645,
+      "final_distance": 0.06718505918979645
+    },
+    {
+      "episode": 262,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.07081887871026993,
+      "best_distance": 0.07041311264038086,
+      "final_distance": 0.07041311264038086
+    },
+    {
+      "episode": 263,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1760793775320053,
+      "best_distance": 0.07314438372850418,
+      "final_distance": 0.07314438372850418
+    },
+    {
+      "episode": 264,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.210820272564888,
+      "best_distance": 0.051225680857896805,
+      "final_distance": 0.051225680857896805
+    },
+    {
+      "episode": 265,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.27651387453079224,
+      "best_distance": 0.07528594881296158,
+      "final_distance": 0.07528594881296158
+    },
+    {
+      "episode": 266,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.24127954244613647,
+      "best_distance": 0.09882573783397675,
+      "final_distance": 0.09882573783397675
+    },
+    {
+      "episode": 267,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.13947804272174835,
+      "best_distance": 0.0668664500117302,
+      "final_distance": 0.0668664500117302
+    },
+    {
+      "episode": 268,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.08487269282341003,
+      "best_distance": 0.0585489496588707,
+      "final_distance": 0.0585489496588707
+    },
+    {
+      "episode": 269,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.17871740460395813,
+      "best_distance": 0.07767438888549805,
+      "final_distance": 0.07767438888549805
+    },
+    {
+      "episode": 270,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.09282591193914413,
+      "best_distance": 0.08967015892267227,
+      "final_distance": 0.08967015892267227
+    },
+    {
+      "episode": 271,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.07598927617073059,
+      "best_distance": 0.05288853868842125,
+      "final_distance": 0.05288853868842125
+    },
+    {
+      "episode": 272,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1636122316122055,
+      "best_distance": 0.05633103474974632,
+      "final_distance": 0.05633103474974632
+    },
+    {
+      "episode": 273,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.12080990523099899,
+      "best_distance": 0.06866203993558884,
+      "final_distance": 0.06866203993558884
+    },
+    {
+      "episode": 274,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.19029918313026428,
+      "best_distance": 0.06499453634023666,
+      "final_distance": 0.06499453634023666
+    },
+    {
+      "episode": 275,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.29157960414886475,
+      "best_distance": 0.0817791074514389,
+      "final_distance": 0.0817791074514389
+    },
+    {
+      "episode": 276,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.10558366775512695,
+      "best_distance": 0.05418713390827179,
+      "final_distance": 0.05418713390827179
+    },
+    {
+      "episode": 277,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2399473488330841,
+      "best_distance": 0.06326217949390411,
+      "final_distance": 0.06326217949390411
+    },
+    {
+      "episode": 278,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.03795645758509636,
+      "best_distance": 0.03795645758509636,
+      "final_distance": 0.03795645758509636
+    },
+    {
+      "episode": 279,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.16568228602409363,
+      "best_distance": 0.09229303151369095,
+      "final_distance": 0.09229303151369095
+    },
+    {
+      "episode": 280,
+      "success": true,
+      "steps": 4,
+      "reward": -3.0,
+      "initial_distance": 0.05271732807159424,
+      "best_distance": 0.05271732807159424,
+      "final_distance": 0.05272547900676727
+    },
+    {
+      "episode": 281,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.20193468034267426,
+      "best_distance": 0.062200404703617096,
+      "final_distance": 0.062200404703617096
+    },
+    {
+      "episode": 282,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.08729278296232224,
+      "best_distance": 0.056469324976205826,
+      "final_distance": 0.056469324976205826
+    },
+    {
+      "episode": 283,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.15089723467826843,
+      "best_distance": 0.07996562868356705,
+      "final_distance": 0.07996562868356705
+    },
+    {
+      "episode": 284,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2401944249868393,
+      "best_distance": 0.082345150411129,
+      "final_distance": 0.082345150411129
+    },
+    {
+      "episode": 285,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.06387796252965927,
+      "best_distance": 0.05222773551940918,
+      "final_distance": 0.05222773551940918
+    },
+    {
+      "episode": 286,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1674797087907791,
+      "best_distance": 0.06677709519863129,
+      "final_distance": 0.06677709519863129
+    },
+    {
+      "episode": 287,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.12961047887802124,
+      "best_distance": 0.0817568227648735,
+      "final_distance": 0.0817568227648735
+    },
+    {
+      "episode": 288,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.09650073945522308,
+      "best_distance": 0.06374364346265793,
+      "final_distance": 0.06374364346265793
+    },
+    {
+      "episode": 289,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.20892508327960968,
+      "best_distance": 0.052428361028432846,
+      "final_distance": 0.052428361028432846
+    },
+    {
+      "episode": 290,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.13486672937870026,
+      "best_distance": 0.11483323574066162,
+      "final_distance": 0.11483323574066162
+    },
+    {
+      "episode": 291,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.21969188749790192,
+      "best_distance": 0.062348440289497375,
+      "final_distance": 0.062348440289497375
+    },
+    {
+      "episode": 292,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22452682256698608,
+      "best_distance": 0.0903787612915039,
+      "final_distance": 0.0903787612915039
+    },
+    {
+      "episode": 293,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.19394327700138092,
+      "best_distance": 0.0764431580901146,
+      "final_distance": 0.0764431580901146
+    },
+    {
+      "episode": 294,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.21103383600711823,
+      "best_distance": 0.06012948229908943,
+      "final_distance": 0.06012948229908943
+    },
+    {
+      "episode": 295,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.15258821845054626,
+      "best_distance": 0.06696021556854248,
+      "final_distance": 0.06696021556854248
+    },
+    {
+      "episode": 296,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.26881688833236694,
+      "best_distance": 0.08906061947345734,
+      "final_distance": 0.08906061947345734
+    },
+    {
+      "episode": 297,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.248860165476799,
+      "best_distance": 0.07553383708000183,
+      "final_distance": 0.07553383708000183
+    },
+    {
+      "episode": 298,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.09277652204036713,
+      "best_distance": 0.05106203630566597,
+      "final_distance": 0.05106203630566597
+    },
+    {
+      "episode": 299,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.2338084876537323,
+      "best_distance": 0.07300476729869843,
+      "final_distance": 0.07300476729869843
+    },
+    {
+      "episode": 300,
+      "success": true,
+      "steps": 4,
+      "reward": -3.0,
+      "initial_distance": 0.05419720336794853,
+      "best_distance": 0.0541871152818203,
+      "final_distance": 0.05418796092271805
+    },
+    {
+      "episode": 301,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.21303796768188477,
+      "best_distance": 0.09933218359947205,
+      "final_distance": 0.09933218359947205
+    },
+    {
+      "episode": 302,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.16554395854473114,
+      "best_distance": 0.05273660644888878,
+      "final_distance": 0.05273660644888878
+    },
+    {
+      "episode": 303,
+      "success": true,
+      "steps": 12,
+      "reward": -11.0,
+      "initial_distance": 0.33325663208961487,
+      "best_distance": 0.09064507484436035,
+      "final_distance": 0.09064507484436035
+    },
+    {
+      "episode": 304,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.24938687682151794,
+      "best_distance": 0.056169480085372925,
+      "final_distance": 0.056169480085372925
+    },
+    {
+      "episode": 305,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2842599153518677,
+      "best_distance": 0.07646141201257706,
+      "final_distance": 0.07646141201257706
+    },
+    {
+      "episode": 306,
+      "success": true,
+      "steps": 11,
+      "reward": -10.0,
+      "initial_distance": 0.19234491884708405,
+      "best_distance": 0.05123259872198105,
+      "final_distance": 0.051635947078466415
+    },
+    {
+      "episode": 307,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.24718111753463745,
+      "best_distance": 0.07291141897439957,
+      "final_distance": 0.07291141897439957
+    },
+    {
+      "episode": 308,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22752584517002106,
+      "best_distance": 0.08552784472703934,
+      "final_distance": 0.08552784472703934
+    },
+    {
+      "episode": 309,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1465548872947693,
+      "best_distance": 0.0899718627333641,
+      "final_distance": 0.0899718627333641
+    },
+    {
+      "episode": 310,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.15380530059337616,
+      "best_distance": 0.08724584430456161,
+      "final_distance": 0.08724584430456161
+    },
+    {
+      "episode": 311,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1453184336423874,
+      "best_distance": 0.05557951331138611,
+      "final_distance": 0.05557951331138611
+    },
+    {
+      "episode": 312,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.2838582992553711,
+      "best_distance": 0.0969567820429802,
+      "final_distance": 0.0969567820429802
+    },
+    {
+      "episode": 313,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22884580492973328,
+      "best_distance": 0.07374491542577744,
+      "final_distance": 0.07374491542577744
+    },
+    {
+      "episode": 314,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.36090287566185,
+      "best_distance": 0.0626954585313797,
+      "final_distance": 0.0626954585313797
+    },
+    {
+      "episode": 315,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.07062770426273346,
+      "best_distance": 0.05236333608627319,
+      "final_distance": 0.05236333608627319
+    },
+    {
+      "episode": 316,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.3032649755477905,
+      "best_distance": 0.06783927232027054,
+      "final_distance": 0.06783927232027054
+    },
+    {
+      "episode": 317,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.25780603289604187,
+      "best_distance": 0.06177844852209091,
+      "final_distance": 0.06177844852209091
+    },
+    {
+      "episode": 318,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.2580132782459259,
+      "best_distance": 0.08441440761089325,
+      "final_distance": 0.08441440761089325
+    },
+    {
+      "episode": 319,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.0761006698012352,
+      "best_distance": 0.07448530197143555,
+      "final_distance": 0.07448530197143555
+    },
+    {
+      "episode": 320,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1324281394481659,
+      "best_distance": 0.06507377326488495,
+      "final_distance": 0.06507377326488495
+    },
+    {
+      "episode": 321,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.15536163747310638,
+      "best_distance": 0.0740523710846901,
+      "final_distance": 0.0740523710846901
+    },
+    {
+      "episode": 322,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.08841342478990555,
+      "best_distance": 0.05025018751621246,
+      "final_distance": 0.05025018751621246
+    },
+    {
+      "episode": 323,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.29608088731765747,
+      "best_distance": 0.0759831890463829,
+      "final_distance": 0.0759831890463829
+    },
+    {
+      "episode": 324,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.21749497950077057,
+      "best_distance": 0.05308316648006439,
+      "final_distance": 0.05308316648006439
+    },
+    {
+      "episode": 325,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.09771473705768585,
+      "best_distance": 0.053466085344552994,
+      "final_distance": 0.053466085344552994
+    },
+    {
+      "episode": 326,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.25821515917778015,
+      "best_distance": 0.08479271829128265,
+      "final_distance": 0.08479271829128265
+    },
+    {
+      "episode": 327,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.19097059965133667,
+      "best_distance": 0.08322860300540924,
+      "final_distance": 0.08322860300540924
+    },
+    {
+      "episode": 328,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.022905180230736732,
+      "best_distance": 0.022905180230736732,
+      "final_distance": 0.022905180230736732
+    },
+    {
+      "episode": 329,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.10319492965936661,
+      "best_distance": 0.05101417005062103,
+      "final_distance": 0.05101417005062103
+    },
+    {
+      "episode": 330,
+      "success": true,
+      "steps": 12,
+      "reward": -11.0,
+      "initial_distance": 0.33690860867500305,
+      "best_distance": 0.09193538129329681,
+      "final_distance": 0.09193538129329681
+    },
+    {
+      "episode": 331,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22959300875663757,
+      "best_distance": 0.08275676518678665,
+      "final_distance": 0.08275676518678665
+    },
+    {
+      "episode": 332,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.12174084782600403,
+      "best_distance": 0.053807180374860764,
+      "final_distance": 0.053807180374860764
+    },
+    {
+      "episode": 333,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.27789416909217834,
+      "best_distance": 0.07474920898675919,
+      "final_distance": 0.07474920898675919
+    },
+    {
+      "episode": 334,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.1814163327217102,
+      "best_distance": 0.06559239327907562,
+      "final_distance": 0.06559239327907562
+    },
+    {
+      "episode": 335,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.26197293400764465,
+      "best_distance": 0.07505254447460175,
+      "final_distance": 0.07505254447460175
+    },
+    {
+      "episode": 336,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2110034078359604,
+      "best_distance": 0.08588812500238419,
+      "final_distance": 0.08588812500238419
+    },
+    {
+      "episode": 337,
+      "success": true,
+      "steps": 11,
+      "reward": -10.0,
+      "initial_distance": 0.2846645414829254,
+      "best_distance": 0.06980209052562714,
+      "final_distance": 0.06980209052562714
+    },
+    {
+      "episode": 338,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.09806840866804123,
+      "best_distance": 0.0681535005569458,
+      "final_distance": 0.0681535005569458
+    },
+    {
+      "episode": 339,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2265835851430893,
+      "best_distance": 0.07615739107131958,
+      "final_distance": 0.07615739107131958
+    },
+    {
+      "episode": 340,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.09898028522729874,
+      "best_distance": 0.06756387650966644,
+      "final_distance": 0.06756387650966644
+    },
+    {
+      "episode": 341,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.13682818412780762,
+      "best_distance": 0.05758640542626381,
+      "final_distance": 0.05758640542626381
+    },
+    {
+      "episode": 342,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2679418921470642,
+      "best_distance": 0.10326425731182098,
+      "final_distance": 0.10326425731182098
+    },
+    {
+      "episode": 343,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2755807042121887,
+      "best_distance": 0.05989263951778412,
+      "final_distance": 0.05989263951778412
+    },
+    {
+      "episode": 344,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.20099057257175446,
+      "best_distance": 0.06141866371035576,
+      "final_distance": 0.06141866371035576
+    },
+    {
+      "episode": 345,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1573718637228012,
+      "best_distance": 0.07505251467227936,
+      "final_distance": 0.07505251467227936
+    },
+    {
+      "episode": 346,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2171887755393982,
+      "best_distance": 0.09246755391359329,
+      "final_distance": 0.09246755391359329
+    },
+    {
+      "episode": 347,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.14395807683467865,
+      "best_distance": 0.05929931253194809,
+      "final_distance": 0.05929931253194809
+    },
+    {
+      "episode": 348,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.21942873299121857,
+      "best_distance": 0.09237036854028702,
+      "final_distance": 0.09237036854028702
+    },
+    {
+      "episode": 349,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2825148105621338,
+      "best_distance": 0.10073400288820267,
+      "final_distance": 0.10073400288820267
+    },
+    {
+      "episode": 350,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.16058433055877686,
+      "best_distance": 0.05035019293427467,
+      "final_distance": 0.05035019293427467
+    },
+    {
+      "episode": 351,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1637244075536728,
+      "best_distance": 0.06607019901275635,
+      "final_distance": 0.06607019901275635
+    },
+    {
+      "episode": 352,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.15627071261405945,
+      "best_distance": 0.058495715260505676,
+      "final_distance": 0.058495715260505676
+    },
+    {
+      "episode": 353,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.1450374871492386,
+      "best_distance": 0.10694094747304916,
+      "final_distance": 0.10694094747304916
+    },
+    {
+      "episode": 354,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.24431994557380676,
+      "best_distance": 0.06886600703001022,
+      "final_distance": 0.06886600703001022
+    },
+    {
+      "episode": 355,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.29355311393737793,
+      "best_distance": 0.06228145956993103,
+      "final_distance": 0.06228145956993103
+    },
+    {
+      "episode": 356,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.055853258818387985,
+      "best_distance": 0.055853258818387985,
+      "final_distance": 0.05586221441626549
+    },
+    {
+      "episode": 357,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22721752524375916,
+      "best_distance": 0.08122757077217102,
+      "final_distance": 0.08122757077217102
+    },
+    {
+      "episode": 358,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.12084466964006424,
+      "best_distance": 0.10709833353757858,
+      "final_distance": 0.10709833353757858
+    },
+    {
+      "episode": 359,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.21696417033672333,
+      "best_distance": 0.08458331972360611,
+      "final_distance": 0.08458331972360611
+    },
+    {
+      "episode": 360,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.16331073641777039,
+      "best_distance": 0.09545828402042389,
+      "final_distance": 0.09545828402042389
+    },
+    {
+      "episode": 361,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.27319833636283875,
+      "best_distance": 0.0726633220911026,
+      "final_distance": 0.0726633220911026
+    },
+    {
+      "episode": 362,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.20863065123558044,
+      "best_distance": 0.055726002901792526,
+      "final_distance": 0.055726002901792526
+    },
+    {
+      "episode": 363,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1566578596830368,
+      "best_distance": 0.09795109927654266,
+      "final_distance": 0.09795109927654266
+    },
+    {
+      "episode": 364,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.10114698857069016,
+      "best_distance": 0.07072876393795013,
+      "final_distance": 0.07072876393795013
+    },
+    {
+      "episode": 365,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1601664423942566,
+      "best_distance": 0.09134770184755325,
+      "final_distance": 0.09134770184755325
+    },
+    {
+      "episode": 366,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.161573126912117,
+      "best_distance": 0.05175159499049187,
+      "final_distance": 0.05175159499049187
+    },
+    {
+      "episode": 367,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.19430899620056152,
+      "best_distance": 0.05170648917555809,
+      "final_distance": 0.05170648917555809
+    },
+    {
+      "episode": 368,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.17670370638370514,
+      "best_distance": 0.08110778778791428,
+      "final_distance": 0.08110778778791428
+    },
+    {
+      "episode": 369,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.12997651100158691,
+      "best_distance": 0.06143084168434143,
+      "final_distance": 0.06143084168434143
+    },
+    {
+      "episode": 370,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22030718624591827,
+      "best_distance": 0.07727070897817612,
+      "final_distance": 0.07727070897817612
+    },
+    {
+      "episode": 371,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.13891710340976715,
+      "best_distance": 0.0502450205385685,
+      "final_distance": 0.0502450205385685
+    },
+    {
+      "episode": 372,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.14542096853256226,
+      "best_distance": 0.07993631064891815,
+      "final_distance": 0.07993631064891815
+    },
+    {
+      "episode": 373,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.04505453258752823,
+      "best_distance": 0.04505453258752823,
+      "final_distance": 0.04505453258752823
+    },
+    {
+      "episode": 374,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.22167660295963287,
+      "best_distance": 0.09057702124118805,
+      "final_distance": 0.09057702124118805
+    },
+    {
+      "episode": 375,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.18044373393058777,
+      "best_distance": 0.05894286930561066,
+      "final_distance": 0.05894286930561066
+    },
+    {
+      "episode": 376,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2093139886856079,
+      "best_distance": 0.07810501009225845,
+      "final_distance": 0.07810501009225845
+    },
+    {
+      "episode": 377,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.026762014254927635,
+      "best_distance": 0.026762014254927635,
+      "final_distance": 0.026762014254927635
+    },
+    {
+      "episode": 378,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.126264750957489,
+      "best_distance": 0.0867934599518776,
+      "final_distance": 0.0867934599518776
+    },
+    {
+      "episode": 379,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1398794949054718,
+      "best_distance": 0.058765023946762085,
+      "final_distance": 0.058765023946762085
+    },
+    {
+      "episode": 380,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.15268820524215698,
+      "best_distance": 0.05542437732219696,
+      "final_distance": 0.05542437732219696
+    },
+    {
+      "episode": 381,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.13188475370407104,
+      "best_distance": 0.05892006680369377,
+      "final_distance": 0.05892006680369377
+    },
+    {
+      "episode": 382,
+      "success": true,
+      "steps": 11,
+      "reward": -10.0,
+      "initial_distance": 0.28236308693885803,
+      "best_distance": 0.050330765545368195,
+      "final_distance": 0.050330765545368195
+    },
+    {
+      "episode": 383,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1111958846449852,
+      "best_distance": 0.08760406076908112,
+      "final_distance": 0.08760406076908112
+    },
+    {
+      "episode": 384,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.10071840137243271,
+      "best_distance": 0.0519908107817173,
+      "final_distance": 0.0519908107817173
+    },
+    {
+      "episode": 385,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.31549733877182007,
+      "best_distance": 0.10097187757492065,
+      "final_distance": 0.10097187757492065
+    },
+    {
+      "episode": 386,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1740504801273346,
+      "best_distance": 0.0658814013004303,
+      "final_distance": 0.0658814013004303
+    },
+    {
+      "episode": 387,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.20133420825004578,
+      "best_distance": 0.06093861535191536,
+      "final_distance": 0.06093861535191536
+    },
+    {
+      "episode": 388,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.09982570260763168,
+      "best_distance": 0.06861686706542969,
+      "final_distance": 0.06861686706542969
+    },
+    {
+      "episode": 389,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.2821459472179413,
+      "best_distance": 0.08764210343360901,
+      "final_distance": 0.08764210343360901
+    },
+    {
+      "episode": 390,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.21972747147083282,
+      "best_distance": 0.10297707468271255,
+      "final_distance": 0.10297707468271255
+    },
+    {
+      "episode": 391,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2170136272907257,
+      "best_distance": 0.06988752633333206,
+      "final_distance": 0.06988752633333206
+    },
+    {
+      "episode": 392,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.16977988183498383,
+      "best_distance": 0.07563807815313339,
+      "final_distance": 0.07563807815313339
+    },
+    {
+      "episode": 393,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.12376762181520462,
+      "best_distance": 0.07536767423152924,
+      "final_distance": 0.07536767423152924
+    },
+    {
+      "episode": 394,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.29269102215766907,
+      "best_distance": 0.08934851735830307,
+      "final_distance": 0.08934851735830307
+    },
+    {
+      "episode": 395,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.26212936639785767,
+      "best_distance": 0.08129087835550308,
+      "final_distance": 0.08129087835550308
+    },
+    {
+      "episode": 396,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1392398476600647,
+      "best_distance": 0.06896143406629562,
+      "final_distance": 0.06896143406629562
+    },
+    {
+      "episode": 397,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.13540616631507874,
+      "best_distance": 0.07128871977329254,
+      "final_distance": 0.07128871977329254
+    },
+    {
+      "episode": 398,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.14387990534305573,
+      "best_distance": 0.06435152888298035,
+      "final_distance": 0.06435152888298035
+    },
+    {
+      "episode": 399,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.17537252604961395,
+      "best_distance": 0.07474084943532944,
+      "final_distance": 0.07474084943532944
+    },
+    {
+      "episode": 400,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.1685646027326584,
+      "best_distance": 0.08774073421955109,
+      "final_distance": 0.08774073421955109
+    },
+    {
+      "episode": 401,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.25443020462989807,
+      "best_distance": 0.07058548182249069,
+      "final_distance": 0.07058548182249069
+    },
+    {
+      "episode": 402,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.22583448886871338,
+      "best_distance": 0.0726081132888794,
+      "final_distance": 0.0726081132888794
+    },
+    {
+      "episode": 403,
+      "success": true,
+      "steps": 11,
+      "reward": -10.0,
+      "initial_distance": 0.2836218774318695,
+      "best_distance": 0.09944065660238266,
+      "final_distance": 0.09944065660238266
+    },
+    {
+      "episode": 404,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.19331733882427216,
+      "best_distance": 0.05524086579680443,
+      "final_distance": 0.05524086579680443
+    },
+    {
+      "episode": 405,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1663995385169983,
+      "best_distance": 0.062312714755535126,
+      "final_distance": 0.062312714755535126
+    },
+    {
+      "episode": 406,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.22002048790454865,
+      "best_distance": 0.06841830164194107,
+      "final_distance": 0.06841830164194107
+    },
+    {
+      "episode": 407,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.11612345278263092,
+      "best_distance": 0.061302684247493744,
+      "final_distance": 0.061302684247493744
+    },
+    {
+      "episode": 408,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.20046499371528625,
+      "best_distance": 0.05907260999083519,
+      "final_distance": 0.05907260999083519
+    },
+    {
+      "episode": 409,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.10493780672550201,
+      "best_distance": 0.0668080523610115,
+      "final_distance": 0.0668080523610115
+    },
+    {
+      "episode": 410,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.21985380351543427,
+      "best_distance": 0.06094621121883392,
+      "final_distance": 0.06094621121883392
+    },
+    {
+      "episode": 411,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.16536621749401093,
+      "best_distance": 0.08679981529712677,
+      "final_distance": 0.08679981529712677
+    },
+    {
+      "episode": 412,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.19199945032596588,
+      "best_distance": 0.10732021927833557,
+      "final_distance": 0.10732021927833557
+    },
+    {
+      "episode": 413,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.09117971360683441,
+      "best_distance": 0.051617834717035294,
+      "final_distance": 0.051617834717035294
+    },
+    {
+      "episode": 414,
+      "success": true,
+      "steps": 11,
+      "reward": -10.0,
+      "initial_distance": 0.26626166701316833,
+      "best_distance": 0.05017665773630142,
+      "final_distance": 0.05017665773630142
+    },
+    {
+      "episode": 415,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.11278213560581207,
+      "best_distance": 0.06767462193965912,
+      "final_distance": 0.06767462193965912
+    },
+    {
+      "episode": 416,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.11903116106987,
+      "best_distance": 0.07962869107723236,
+      "final_distance": 0.07962869107723236
+    },
+    {
+      "episode": 417,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.24264562129974365,
+      "best_distance": 0.06668113172054291,
+      "final_distance": 0.06668113172054291
+    },
+    {
+      "episode": 418,
+      "success": true,
+      "steps": 11,
+      "reward": -10.0,
+      "initial_distance": 0.3120873272418976,
+      "best_distance": 0.09257330000400543,
+      "final_distance": 0.09257330000400543
+    },
+    {
+      "episode": 419,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2520790696144104,
+      "best_distance": 0.0514250174164772,
+      "final_distance": 0.0514250174164772
+    },
+    {
+      "episode": 420,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.05643143504858017,
+      "best_distance": 0.056285012513399124,
+      "final_distance": 0.056285012513399124
+    },
+    {
+      "episode": 421,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.18870380520820618,
+      "best_distance": 0.06306196004152298,
+      "final_distance": 0.06306196004152298
+    },
+    {
+      "episode": 422,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2608846426010132,
+      "best_distance": 0.05399232730269432,
+      "final_distance": 0.05399232730269432
+    },
+    {
+      "episode": 423,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.10987991839647293,
+      "best_distance": 0.07942679524421692,
+      "final_distance": 0.07942679524421692
+    },
+    {
+      "episode": 424,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.17905555665493011,
+      "best_distance": 0.053468890488147736,
+      "final_distance": 0.053468890488147736
+    },
+    {
+      "episode": 425,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1905898153781891,
+      "best_distance": 0.08946386724710464,
+      "final_distance": 0.08946386724710464
+    },
+    {
+      "episode": 426,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.165415421128273,
+      "best_distance": 0.05200578644871712,
+      "final_distance": 0.05200578644871712
+    },
+    {
+      "episode": 427,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.08050457388162613,
+      "best_distance": 0.06896257400512695,
+      "final_distance": 0.06896257400512695
+    },
+    {
+      "episode": 428,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.11426662653684616,
+      "best_distance": 0.10225003957748413,
+      "final_distance": 0.10225003957748413
+    },
+    {
+      "episode": 429,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.08149373531341553,
+      "best_distance": 0.08149373531341553,
+      "final_distance": 0.08241434395313263
+    },
+    {
+      "episode": 430,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1980810910463333,
+      "best_distance": 0.10022155940532684,
+      "final_distance": 0.10022155940532684
+    },
+    {
+      "episode": 431,
+      "success": true,
+      "steps": 1,
+      "reward": 0.0,
+      "initial_distance": 0.039713092148303986,
+      "best_distance": 0.039713092148303986,
+      "final_distance": 0.039713092148303986
+    },
+    {
+      "episode": 432,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.10510048270225525,
+      "best_distance": 0.07415159046649933,
+      "final_distance": 0.07415159046649933
+    },
+    {
+      "episode": 433,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2564533054828644,
+      "best_distance": 0.06661208719015121,
+      "final_distance": 0.06661208719015121
+    },
+    {
+      "episode": 434,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.10938266664743423,
+      "best_distance": 0.09935387969017029,
+      "final_distance": 0.09935387969017029
+    },
+    {
+      "episode": 435,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.3056297302246094,
+      "best_distance": 0.05688498169183731,
+      "final_distance": 0.05688498169183731
+    },
+    {
+      "episode": 436,
+      "success": true,
+      "steps": 11,
+      "reward": -10.0,
+      "initial_distance": 0.28903713822364807,
+      "best_distance": 0.072983019053936,
+      "final_distance": 0.072983019053936
+    },
+    {
+      "episode": 437,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.14298802614212036,
+      "best_distance": 0.08234135806560516,
+      "final_distance": 0.08234135806560516
+    },
+    {
+      "episode": 438,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.08032890409231186,
+      "best_distance": 0.05734756216406822,
+      "final_distance": 0.05734756216406822
+    },
+    {
+      "episode": 439,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.14796321094036102,
+      "best_distance": 0.08039514720439911,
+      "final_distance": 0.08039514720439911
+    },
+    {
+      "episode": 440,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.14808903634548187,
+      "best_distance": 0.05722709372639656,
+      "final_distance": 0.05722709372639656
+    },
+    {
+      "episode": 441,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.275230348110199,
+      "best_distance": 0.09544923156499863,
+      "final_distance": 0.09544923156499863
+    },
+    {
+      "episode": 442,
+      "success": true,
+      "steps": 11,
+      "reward": -10.0,
+      "initial_distance": 0.23613370954990387,
+      "best_distance": 0.07014504820108414,
+      "final_distance": 0.07014504820108414
+    },
+    {
+      "episode": 443,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.21079730987548828,
+      "best_distance": 0.08560506254434586,
+      "final_distance": 0.08560506254434586
+    },
+    {
+      "episode": 444,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.20146985352039337,
+      "best_distance": 0.06579677015542984,
+      "final_distance": 0.06579677015542984
+    },
+    {
+      "episode": 445,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.2660374939441681,
+      "best_distance": 0.07758315652608871,
+      "final_distance": 0.07758315652608871
+    },
+    {
+      "episode": 446,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.09530635178089142,
+      "best_distance": 0.055933255702257156,
+      "final_distance": 0.055933255702257156
+    },
+    {
+      "episode": 447,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.2175653576850891,
+      "best_distance": 0.09691642969846725,
+      "final_distance": 0.09691642969846725
+    },
+    {
+      "episode": 448,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.09423713386058807,
+      "best_distance": 0.09145677089691162,
+      "final_distance": 0.09145677089691162
+    },
+    {
+      "episode": 449,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.22107775509357452,
+      "best_distance": 0.0751216933131218,
+      "final_distance": 0.0751216933131218
+    },
+    {
+      "episode": 450,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2255079597234726,
+      "best_distance": 0.06066311150789261,
+      "final_distance": 0.06066311150789261
+    },
+    {
+      "episode": 451,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.16086561977863312,
+      "best_distance": 0.0762300044298172,
+      "final_distance": 0.0762300044298172
+    },
+    {
+      "episode": 452,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.19722647964954376,
+      "best_distance": 0.0820135846734047,
+      "final_distance": 0.0820135846734047
+    },
+    {
+      "episode": 453,
+      "success": true,
+      "steps": 4,
+      "reward": -3.0,
+      "initial_distance": 0.0627630278468132,
+      "best_distance": 0.06276017427444458,
+      "final_distance": 0.06276017427444458
+    },
+    {
+      "episode": 454,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.20074498653411865,
+      "best_distance": 0.05094999819993973,
+      "final_distance": 0.05094999819993973
+    },
+    {
+      "episode": 455,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.3232560455799103,
+      "best_distance": 0.0839446559548378,
+      "final_distance": 0.0839446559548378
+    },
+    {
+      "episode": 456,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.15008169412612915,
+      "best_distance": 0.0856783464550972,
+      "final_distance": 0.0856783464550972
+    },
+    {
+      "episode": 457,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.15523070096969604,
+      "best_distance": 0.0694732591509819,
+      "final_distance": 0.0694732591509819
+    },
+    {
+      "episode": 458,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1442953646183014,
+      "best_distance": 0.07775193452835083,
+      "final_distance": 0.07775193452835083
+    },
+    {
+      "episode": 459,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2822713553905487,
+      "best_distance": 0.05418628454208374,
+      "final_distance": 0.05418628454208374
+    },
+    {
+      "episode": 460,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.1512841135263443,
+      "best_distance": 0.0702911913394928,
+      "final_distance": 0.0702911913394928
+    },
+    {
+      "episode": 461,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.10067371279001236,
+      "best_distance": 0.09427706897258759,
+      "final_distance": 0.09427706897258759
+    },
+    {
+      "episode": 462,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.2865527272224426,
+      "best_distance": 0.08154736459255219,
+      "final_distance": 0.08154736459255219
+    },
+    {
+      "episode": 463,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.23437932133674622,
+      "best_distance": 0.08688265085220337,
+      "final_distance": 0.08688265085220337
+    },
+    {
+      "episode": 464,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2378150224685669,
+      "best_distance": 0.05311310663819313,
+      "final_distance": 0.05311310663819313
+    },
+    {
+      "episode": 465,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.11341486126184464,
+      "best_distance": 0.08213713020086288,
+      "final_distance": 0.08213713020086288
+    },
+    {
+      "episode": 466,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.19688193500041962,
+      "best_distance": 0.0636717826128006,
+      "final_distance": 0.0636717826128006
+    },
+    {
+      "episode": 467,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1455303579568863,
+      "best_distance": 0.05497349053621292,
+      "final_distance": 0.05497349053621292
+    },
+    {
+      "episode": 468,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1726832538843155,
+      "best_distance": 0.06786152720451355,
+      "final_distance": 0.06786152720451355
+    },
+    {
+      "episode": 469,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.11928761005401611,
+      "best_distance": 0.05729396268725395,
+      "final_distance": 0.05729396268725395
+    },
+    {
+      "episode": 470,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.23962272703647614,
+      "best_distance": 0.07417093962430954,
+      "final_distance": 0.07417093962430954
+    },
+    {
+      "episode": 471,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.15773078799247742,
+      "best_distance": 0.1143200471997261,
+      "final_distance": 0.1143200471997261
+    },
+    {
+      "episode": 472,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1958136111497879,
+      "best_distance": 0.07073851674795151,
+      "final_distance": 0.07073851674795151
+    },
+    {
+      "episode": 473,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.07045251131057739,
+      "best_distance": 0.06519606709480286,
+      "final_distance": 0.06519606709480286
+    },
+    {
+      "episode": 474,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.2664089798927307,
+      "best_distance": 0.062464937567710876,
+      "final_distance": 0.062464937567710876
+    },
+    {
+      "episode": 475,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.28936007618904114,
+      "best_distance": 0.0840749442577362,
+      "final_distance": 0.0840749442577362
+    },
+    {
+      "episode": 476,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.08495126664638519,
+      "best_distance": 0.06925077736377716,
+      "final_distance": 0.06925077736377716
+    },
+    {
+      "episode": 477,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.19319438934326172,
+      "best_distance": 0.07011118531227112,
+      "final_distance": 0.07011118531227112
+    },
+    {
+      "episode": 478,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.1863487809896469,
+      "best_distance": 0.08756610006093979,
+      "final_distance": 0.08756610006093979
+    },
+    {
+      "episode": 479,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.08289216458797455,
+      "best_distance": 0.07326143980026245,
+      "final_distance": 0.07326143980026245
+    },
+    {
+      "episode": 480,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.20366141200065613,
+      "best_distance": 0.11365360021591187,
+      "final_distance": 0.11365360021591187
+    },
+    {
+      "episode": 481,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.2798945903778076,
+      "best_distance": 0.06361547857522964,
+      "final_distance": 0.06361547857522964
+    },
+    {
+      "episode": 482,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.20594511926174164,
+      "best_distance": 0.08505139499902725,
+      "final_distance": 0.08505139499902725
+    },
+    {
+      "episode": 483,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.16279752552509308,
+      "best_distance": 0.08026649802923203,
+      "final_distance": 0.08026649802923203
+    },
+    {
+      "episode": 484,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.3211875259876251,
+      "best_distance": 0.10084064304828644,
+      "final_distance": 0.10084064304828644
+    },
+    {
+      "episode": 485,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.14401952922344208,
+      "best_distance": 0.06550263613462448,
+      "final_distance": 0.06550263613462448
+    },
+    {
+      "episode": 486,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.2128736525774002,
+      "best_distance": 0.08696584403514862,
+      "final_distance": 0.08696584403514862
+    },
+    {
+      "episode": 487,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.20535774528980255,
+      "best_distance": 0.0697483941912651,
+      "final_distance": 0.0697483941912651
+    },
+    {
+      "episode": 488,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.19961339235305786,
+      "best_distance": 0.07495459169149399,
+      "final_distance": 0.07495459169149399
+    },
+    {
+      "episode": 489,
+      "success": true,
+      "steps": 10,
+      "reward": -9.0,
+      "initial_distance": 0.24892176687717438,
+      "best_distance": 0.07949366420507431,
+      "final_distance": 0.07949366420507431
+    },
+    {
+      "episode": 490,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.250572144985199,
+      "best_distance": 0.09857725352048874,
+      "final_distance": 0.09857725352048874
+    },
+    {
+      "episode": 491,
+      "success": true,
+      "steps": 6,
+      "reward": -5.0,
+      "initial_distance": 0.15405328571796417,
+      "best_distance": 0.07787516713142395,
+      "final_distance": 0.07787516713142395
+    },
+    {
+      "episode": 492,
+      "success": true,
+      "steps": 5,
+      "reward": -4.0,
+      "initial_distance": 0.11538203060626984,
+      "best_distance": 0.10604501515626907,
+      "final_distance": 0.10604501515626907
+    },
+    {
+      "episode": 493,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.25225046277046204,
+      "best_distance": 0.07042691111564636,
+      "final_distance": 0.07042691111564636
+    },
+    {
+      "episode": 494,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.17781324684619904,
+      "best_distance": 0.08710440993309021,
+      "final_distance": 0.08710440993309021
+    },
+    {
+      "episode": 495,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.19604235887527466,
+      "best_distance": 0.058065298944711685,
+      "final_distance": 0.058065298944711685
+    },
+    {
+      "episode": 496,
+      "success": true,
+      "steps": 9,
+      "reward": -8.0,
+      "initial_distance": 0.19375358521938324,
+      "best_distance": 0.07392172515392303,
+      "final_distance": 0.07392172515392303
+    },
+    {
+      "episode": 497,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.13333630561828613,
+      "best_distance": 0.07374515384435654,
+      "final_distance": 0.07374515384435654
+    },
+    {
+      "episode": 498,
+      "success": true,
+      "steps": 8,
+      "reward": -7.0,
+      "initial_distance": 0.17457863688468933,
+      "best_distance": 0.08293942362070084,
+      "final_distance": 0.08293942362070084
+    },
+    {
+      "episode": 499,
+      "success": true,
+      "steps": 7,
+      "reward": -6.0,
+      "initial_distance": 0.12303757667541504,
+      "best_distance": 0.05692695453763008,
+      "final_distance": 0.05692695453763008
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "input_dir": "outputs/teacher_datasets/panda_pickandplace_tqc_500",
+  "root": "outputs/lerobot_datasets/panda_pickandplace_tqc_teacher_500",
+  "repo_id": "local/panda_pickandplace_tqc_teacher_500",
+  "robot_type": "panda_gym_panda_pickandplace",
+  "fps": 25,
+  "raw_episodes": 500,
+  "raw_total_frames": 3712,
+  "raw_success_rate": 1.0,
+  "converted_episodes": 500,
+  "converted_frames": 3712,
+  "state_shape": [
+    25
+  ],
+  "action_shape": [
+    6
+  ],
+  "camera_shape": [
+    3,
+    256,
+    256
+  ],
+  "task": "pick and place the cube",
+  "status": "LEROBOT_CONVERSION_OK"
+}
