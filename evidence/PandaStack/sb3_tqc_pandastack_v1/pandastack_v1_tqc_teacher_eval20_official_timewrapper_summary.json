@@ -1,0 +1,218 @@
+{
+  "env": "PandaStack-v1",
+  "teacher": "sb3/tqc-PandaStack-v1",
+  "wrapper": "sb3_contrib.common.wrappers.TimeFeatureWrapper",
+  "model_path": "logs/tqc/PandaStack-v1_1/tqc-PandaStack-v1.zip",
+  "panda_gym_version": "1.1.1",
+  "episodes": 20,
+  "max_steps": 100,
+  "base_seed": 1000,
+  "success_rate": 0.1,
+  "mean_initial_distance": 0.2508120972663164,
+  "mean_best_distance": 0.24932788275182247,
+  "mean_final_distance": 0.25440770797431467,
+  "mean_improvement": 0.0014842145144939422,
+  "mean_steps": 90.1,
+  "episode_results": [
+    {
+      "episode": 0,
+      "seed": 1000,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.11752969771623611,
+      "best_distance": 0.11752969771623611,
+      "final_distance": 0.1241602674126625,
+      "improvement": 0.0
+    },
+    {
+      "episode": 1,
+      "seed": 1001,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.39431893825531006,
+      "best_distance": 0.39431893825531006,
+      "final_distance": 0.3964005410671234,
+      "improvement": 0.0
+    },
+    {
+      "episode": 2,
+      "seed": 1002,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.13132309913635254,
+      "best_distance": 0.13132309913635254,
+      "final_distance": 0.1373170167207718,
+      "improvement": 0.0
+    },
+    {
+      "episode": 3,
+      "seed": 1003,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.37944909930229187,
+      "best_distance": 0.37944909930229187,
+      "final_distance": 0.38149744272232056,
+      "improvement": 0.0
+    },
+    {
+      "episode": 4,
+      "seed": 1004,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.30205512046813965,
+      "best_distance": 0.30205512046813965,
+      "final_distance": 0.3046095073223114,
+      "improvement": 0.0
+    },
+    {
+      "episode": 5,
+      "seed": 1005,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.2885344624519348,
+      "best_distance": 0.2885344624519348,
+      "final_distance": 0.2912541627883911,
+      "improvement": 0.0
+    },
+    {
+      "episode": 6,
+      "seed": 1006,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.10597303509712219,
+      "best_distance": 0.10597303509712219,
+      "final_distance": 0.11321404576301575,
+      "improvement": 0.0
+    },
+    {
+      "episode": 7,
+      "seed": 1007,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.4058924913406372,
+      "best_distance": 0.4058924913406372,
+      "final_distance": 0.4078975319862366,
+      "improvement": 0.0
+    },
+    {
+      "episode": 8,
+      "seed": 1008,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.26184311509132385,
+      "best_distance": 0.26184311509132385,
+      "final_distance": 0.2648744285106659,
+      "improvement": 0.0
+    },
+    {
+      "episode": 9,
+      "seed": 1009,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.2117452323436737,
+      "best_distance": 0.2117452323436737,
+      "final_distance": 0.21550194919109344,
+      "improvement": 0.0
+    },
+    {
+      "episode": 10,
+      "seed": 1010,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.29182693362236023,
+      "best_distance": 0.28958815336227417,
+      "final_distance": 0.3341219425201416,
+      "improvement": 0.0022387802600860596
+    },
+    {
+      "episode": 11,
+      "seed": 1011,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.3790457844734192,
+      "best_distance": 0.3790457844734192,
+      "final_distance": 0.38106846809387207,
+      "improvement": 0.0
+    },
+    {
+      "episode": 12,
+      "seed": 1012,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.263169527053833,
+      "best_distance": 0.2434658259153366,
+      "final_distance": 0.2434777170419693,
+      "improvement": 0.0197037011384964
+    },
+    {
+      "episode": 13,
+      "seed": 1013,
+      "success": true,
+      "steps": 1,
+      "initial_distance": 0.08383061736822128,
+      "best_distance": 0.08383061736822128,
+      "final_distance": 0.084234319627285,
+      "improvement": 0.0
+    },
+    {
+      "episode": 14,
+      "seed": 1014,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.22458897531032562,
+      "best_distance": 0.21684716641902924,
+      "final_distance": 0.21933892369270325,
+      "improvement": 0.007741808891296387
+    },
+    {
+      "episode": 15,
+      "seed": 1015,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.3235851526260376,
+      "best_distance": 0.3235851526260376,
+      "final_distance": 0.32604271173477173,
+      "improvement": 0.0
+    },
+    {
+      "episode": 16,
+      "seed": 1016,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.32774701714515686,
+      "best_distance": 0.32774701714515686,
+      "final_distance": 0.3302937150001526,
+      "improvement": 0.0
+    },
+    {
+      "episode": 17,
+      "seed": 1017,
+      "success": true,
+      "steps": 1,
+      "initial_distance": 0.07325208932161331,
+      "best_distance": 0.07325208932161331,
+      "final_distance": 0.0737074688076973,
+      "improvement": 0.0
+    },
+    {
+      "episode": 18,
+      "seed": 1018,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.1263861209154129,
+      "best_distance": 0.1263861209154129,
+      "final_distance": 0.13255318999290466,
+      "improvement": 0.0
+    },
+    {
+      "episode": 19,
+      "seed": 1019,
+      "success": false,
+      "steps": 100,
+      "initial_distance": 0.32414543628692627,
+      "best_distance": 0.32414543628692627,
+      "final_distance": 0.32658880949020386,
+      "improvement": 0.0
+    }
+  ]
+}
