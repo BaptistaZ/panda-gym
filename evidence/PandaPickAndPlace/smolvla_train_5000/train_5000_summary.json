@@ -1,0 +1,17 @@
+{
+  "task": "PandaPickAndPlace-v3",
+  "dataset_repo_id": "local/panda_pickandplace_tqc_teacher_100",
+  "dataset_num_episodes": 100,
+  "dataset_num_frames": 751,
+  "policy_type": "smolvla",
+  "pretrained_path": "lerobot/smolvla_base",
+  "checkpoint_path": "outputs/train/smolvla_panda_pickandplace_tqc_100_5000/checkpoints/005000/pretrained_model",
+  "device": "cuda",
+  "steps": 5000,
+  "batch_size": 2,
+  "approx_epochs": 13.32,
+  "final_loss": 0.265,
+  "checkpoint_saved": true,
+  "training_status": "completed",
+  "output_size": "1.5G"
+}

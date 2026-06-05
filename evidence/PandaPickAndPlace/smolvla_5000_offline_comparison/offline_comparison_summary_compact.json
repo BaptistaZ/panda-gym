@@ -1,0 +1,55 @@
+{
+  "task": "PandaPickAndPlace-v3",
+  "dataset_repo_id": "local/panda_pickandplace_tqc_teacher_100",
+  "dataset_frames": 751,
+  "dataset_episodes": 100,
+  "num_samples": 751,
+  "base_model": "lerobot/smolvla_base",
+  "checkpoint": "outputs/train/smolvla_panda_pickandplace_tqc_100_5000/checkpoints/005000/pretrained_model",
+  "mean_base_l2_real_4d": 1.9042556331097364,
+  "mean_checkpoint_l2_real_4d": 0.4822541625498138,
+  "mean_improvement_l2_real_4d": 1.4220014705599227,
+  "relative_improvement_real_4d": 0.7467492524823095,
+  "checkpoint_l2_real_4d_summary": {
+    "mean": 0.48225417733192444,
+    "median": 0.4197213053703308,
+    "min": 0.09589064121246338,
+    "max": 2.296215772628784,
+    "p25": 0.30783340334892273,
+    "p75": 0.5771149396896362,
+    "p90": 0.8136558532714844
+  },
+  "checkpoint_abs_error_per_dim": {
+    "dim_0": {
+      "mean_abs_error": 0.19614045321941376,
+      "median_abs_error": 0.1560778021812439,
+      "max_abs_error": 1.4975578784942627
+    },
+    "dim_1": {
+      "mean_abs_error": 0.1780136078596115,
+      "median_abs_error": 0.15047228336334229,
+      "max_abs_error": 1.0218465328216553
+    },
+    "dim_2": {
+      "mean_abs_error": 0.23692700266838074,
+      "median_abs_error": 0.16361486911773682,
+      "max_abs_error": 1.859135627746582
+    },
+    "dim_3": {
+      "mean_abs_error": 0.18479309976100922,
+      "median_abs_error": 0.13355901837348938,
+      "max_abs_error": 1.1664915084838867
+    },
+    "dim_4": {
+      "mean_abs_error": 0.0,
+      "median_abs_error": 0.0,
+      "max_abs_error": 0.0
+    },
+    "dim_5": {
+      "mean_abs_error": 0.0,
+      "median_abs_error": 0.0,
+      "max_abs_error": 0.0
+    }
+  },
+  "status": "OFFLINE_COMPARISON_OK"
+}
