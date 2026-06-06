@@ -1,0 +1,103 @@
+{
+  "purpose": "Deterministic action-scale comparison using the same checkpoint and episode seeds 0-19.",
+  "checkpoint": "outputs/train/smolvla_panda_pickandplace_tqc_500_10000/checkpoints/010000/pretrained_model",
+  "winner_action_scale": 1.0,
+  "selection_metric": "success_rate",
+  "runs": {
+    "1.0": {
+      "source_output": "outputs/smolvla_rollout/deterministic_500_10000_20_scale_1/rollout_summary.json",
+      "env_id": "PandaPickAndPlace-v3",
+      "checkpoint": "outputs/train/smolvla_panda_pickandplace_tqc_500_10000/checkpoints/010000/pretrained_model",
+      "dataset_repo_id": "local/panda_pickandplace_tqc_teacher_500",
+      "dataset_root": "outputs/lerobot_datasets/panda_pickandplace_tqc_teacher_500",
+      "episodes": 20,
+      "max_steps": 50,
+      "seed": 0,
+      "episode_seed_range": [
+        0,
+        19
+      ],
+      "rng_seeded_per_episode": true,
+      "device": "cuda",
+      "action_scale": 1.0,
+      "success_rate": 0.35,
+      "success_count": 7,
+      "successful_episode_seeds": [
+        2,
+        4,
+        7,
+        9,
+        12,
+        14,
+        19
+      ],
+      "mean_steps": 35.65,
+      "mean_reward": -35.3,
+      "mean_initial_distance": 0.17567907683551312,
+      "mean_best_distance": 0.11035941168665886,
+      "mean_final_distance": 0.23917475640773772,
+      "mean_distance_improvement": 0.06531966514885426
+    },
+    "0.75": {
+      "source_output": "outputs/smolvla_rollout/deterministic_500_10000_20_scale_075/rollout_summary.json",
+      "env_id": "PandaPickAndPlace-v3",
+      "checkpoint": "outputs/train/smolvla_panda_pickandplace_tqc_500_10000/checkpoints/010000/pretrained_model",
+      "dataset_repo_id": "local/panda_pickandplace_tqc_teacher_500",
+      "dataset_root": "outputs/lerobot_datasets/panda_pickandplace_tqc_teacher_500",
+      "episodes": 20,
+      "max_steps": 50,
+      "seed": 0,
+      "episode_seed_range": [
+        0,
+        19
+      ],
+      "rng_seeded_per_episode": true,
+      "device": "cuda",
+      "action_scale": 0.75,
+      "success_rate": 0.3,
+      "success_count": 6,
+      "successful_episode_seeds": [
+        1,
+        2,
+        12,
+        14,
+        17,
+        19
+      ],
+      "mean_steps": 41.9,
+      "mean_reward": -41.6,
+      "mean_initial_distance": 0.17567907683551312,
+      "mean_best_distance": 0.12175338976085186,
+      "mean_final_distance": 0.15778901260346173,
+      "mean_distance_improvement": 0.053925687074661256
+    },
+    "0.5": {
+      "source_output": "outputs/smolvla_rollout/deterministic_500_10000_20_scale_05/rollout_summary.json",
+      "env_id": "PandaPickAndPlace-v3",
+      "checkpoint": "outputs/train/smolvla_panda_pickandplace_tqc_500_10000/checkpoints/010000/pretrained_model",
+      "dataset_repo_id": "local/panda_pickandplace_tqc_teacher_500",
+      "dataset_root": "outputs/lerobot_datasets/panda_pickandplace_tqc_teacher_500",
+      "episodes": 20,
+      "max_steps": 50,
+      "seed": 0,
+      "episode_seed_range": [
+        0,
+        19
+      ],
+      "rng_seeded_per_episode": true,
+      "device": "cuda",
+      "action_scale": 0.5,
+      "success_rate": 0.05,
+      "success_count": 1,
+      "successful_episode_seeds": [
+        14
+      ],
+      "mean_steps": 48.7,
+      "mean_reward": -48.65,
+      "mean_initial_distance": 0.17567907683551312,
+      "mean_best_distance": 0.16261195559054614,
+      "mean_final_distance": 0.19819446355104448,
+      "mean_distance_improvement": 0.013067121244966983
+    }
+  }
+}

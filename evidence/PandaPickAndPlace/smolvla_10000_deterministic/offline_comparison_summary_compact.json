@@ -1,0 +1,60 @@
+{
+  "source_output": "outputs/smolvla_eval/panda_pickandplace_500_10000_offline_compare_full/offline_comparison_summary.json",
+  "ok": true,
+  "purpose": "Compare SmolVLA base and trained checkpoint against PandaPickAndPlace TQC teacher actions",
+  "note": "This checks offline action proximity on dataset samples only. It does not prove rollout success in PandaPickAndPlace-v3.",
+  "device": "cuda",
+  "repo_id": "local/panda_pickandplace_tqc_teacher_500",
+  "root": "outputs/lerobot_datasets/panda_pickandplace_tqc_teacher_500",
+  "base_model": "lerobot/smolvla_base",
+  "checkpoint": "outputs/train/smolvla_panda_pickandplace_tqc_500_10000/checkpoints/010000/pretrained_model",
+  "num_frames": 3712,
+  "num_episodes": 500,
+  "num_samples": 3712,
+  "used_dataset_stats": true,
+  "mean_base_l2_real_4d": 1.888801774106406,
+  "mean_checkpoint_l2_real_4d": 0.5119126794492457,
+  "mean_improvement_l2_real_4d": 1.3768890946571604,
+  "relative_improvement_real_4d": 0.7289749054310202,
+  "checkpoint_l2_real_4d_summary": {
+    "mean": 0.5119127035140991,
+    "median": 0.4334874451160431,
+    "min": 0.03761376440525055,
+    "max": 2.5708796977996826,
+    "p25": 0.30615419149398804,
+    "p75": 0.6299428939819336,
+    "p90": 0.8785023093223572
+  },
+  "checkpoint_abs_error_per_dim": {
+    "dim_0": {
+      "mean_abs_error": 0.20929263532161713,
+      "median_abs_error": 0.1628475934267044,
+      "max_abs_error": 1.8784233331680298
+    },
+    "dim_1": {
+      "mean_abs_error": 0.20485398173332214,
+      "median_abs_error": 0.16417163610458374,
+      "max_abs_error": 1.3225502967834473
+    },
+    "dim_2": {
+      "mean_abs_error": 0.2369982749223709,
+      "median_abs_error": 0.1397247016429901,
+      "max_abs_error": 1.970456600189209
+    },
+    "dim_3": {
+      "mean_abs_error": 0.18372277915477753,
+      "median_abs_error": 0.1266930103302002,
+      "max_abs_error": 1.7911416292190552
+    },
+    "dim_4": {
+      "mean_abs_error": 0.0,
+      "median_abs_error": 0.0,
+      "max_abs_error": 0.0
+    },
+    "dim_5": {
+      "mean_abs_error": 0.0,
+      "median_abs_error": 0.0,
+      "max_abs_error": 0.0
+    }
+  }
+}

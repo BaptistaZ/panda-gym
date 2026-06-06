@@ -1,0 +1,29 @@
+{
+  "checkpoint": "outputs/train/smolvla_panda_pickandplace_tqc_500_10000/checkpoints/010000/pretrained_model",
+  "dataset_repo_id": "local/panda_pickandplace_tqc_teacher_500",
+  "dataset_root": "outputs/lerobot_datasets/panda_pickandplace_tqc_teacher_500",
+  "dataset_episodes": 500,
+  "dataset_frames": 3712,
+  "training_steps": 10000,
+  "batch_size": 2,
+  "approximate_dataset_epochs": 5.387931034482759,
+  "policy_type": "smolvla",
+  "chunk_size": 1,
+  "n_action_steps": 1,
+  "max_state_dim": 32,
+  "max_action_dim": 32,
+  "freeze_vision_encoder": true,
+  "train_expert_only": true,
+  "train_state_proj": true,
+  "load_vlm_weights": false,
+  "official_action_scale": 1.0,
+  "official_deterministic_result": {
+    "episodes": 50,
+    "success_count": 17,
+    "success_rate": 0.34,
+    "episode_seed_range": [
+      0,
+      49
+    ]
+  }
+}

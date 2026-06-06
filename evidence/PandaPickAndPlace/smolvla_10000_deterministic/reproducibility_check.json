@@ -1,0 +1,12 @@
+{
+  "purpose": "Verify byte-for-byte reproducibility after seeding Python, NumPy, PyTorch and CUDA per episode.",
+  "checkpoint": "outputs/train/smolvla_panda_pickandplace_tqc_500_10000/checkpoints/010000/pretrained_model",
+  "episodes": 5,
+  "seed": 0,
+  "action_scale": 0.75,
+  "run_a": "outputs/smolvla_rollout/repro_test_075_a/rollout_summary.json",
+  "run_b": "outputs/smolvla_rollout/repro_test_075_b/rollout_summary.json",
+  "run_a_sha256": "f33ce47efb124f14c7936491d6c86277c2f5fbe0fc696335fd59cf45ccabcfdf",
+  "run_b_sha256": "f33ce47efb124f14c7936491d6c86277c2f5fbe0fc696335fd59cf45ccabcfdf",
+  "identical": true
+}

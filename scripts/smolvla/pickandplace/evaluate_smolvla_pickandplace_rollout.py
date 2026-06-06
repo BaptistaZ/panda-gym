@@ -1,5 +1,6 @@
 import argparse
 import json
+import random
 from pathlib import Path
 
 import gymnasium as gym
@@ -40,6 +41,7 @@ def build_state_25(obs: dict) -> np.ndarray:
 def goal_distance(obs: dict) -> float:
     achieved = np.asarray(obs["achieved_goal"], dtype=np.float32)
     desired = np.asarray(obs["desired_goal"], dtype=np.float32)
+
     return float(np.linalg.norm(achieved - desired))
 
 
@@ -53,7 +55,10 @@ def render_to_chw_float(frame: np.ndarray) -> torch.Tensor:
     return torch.tensor(arr, dtype=torch.float32)
 
 
-def maybe_postprocess_action(postprocessor, action: torch.Tensor) -> torch.Tensor:
+def maybe_postprocess_action(
+    postprocessor,
+    action: torch.Tensor,
+) -> torch.Tensor:
     if postprocessor is None:
         return action
 
@@ -81,7 +86,10 @@ def select_smolvla_action(
     frame: np.ndarray,
     device: str,
 ) -> np.ndarray:
-    state = torch.tensor(build_state_25(obs), dtype=torch.float32)
+    state = torch.tensor(
+        build_state_25(obs),
+        dtype=torch.float32,
+    )
     image = render_to_chw_float(frame)
 
     raw_batch = {
@@ -102,18 +110,32 @@ def select_smolvla_action(
 
     with torch.no_grad():
         raw_action = policy.select_action(processed)
-        action = maybe_postprocess_action(postprocessor, raw_action)
+        action = maybe_postprocess_action(
+            postprocessor,
+            raw_action,
+        )
 
-    action_np = action.detach().cpu().numpy().reshape(-1).astype(np.float32)
+    action_np = (
+        action.detach()
+        .cpu()
+        .numpy()
+        .reshape(-1)
+        .astype(np.float32)
+    )
 
     if action_np.shape != (6,):
-        raise ValueError(f"Expected SmolVLA action shape (6,), got {action_np.shape}")
+        raise ValueError(
+            f"Expected SmolVLA action shape (6,), got {action_np.shape}"
+        )
 
     return action_np
 
 
 def get_dataset_stats(repo_id: str, root: Path):
-    dataset = LeRobotDataset(repo_id, root=root)
+    dataset = LeRobotDataset(
+        repo_id,
+        root=root,
+    )
 
     if hasattr(dataset, "meta") and hasattr(dataset.meta, "stats"):
         return dataset.meta.stats
@@ -125,13 +147,23 @@ def get_dataset_stats(repo_id: str, root: Path):
 
 
 def reset_policy_if_supported(policy) -> None:
-    # Some LeRobot policies keep an internal action queue/cache.
+    # Some LeRobot policies keep an internal action queue or cache.
     # Resetting it at episode boundaries avoids leaking state across rollouts.
     if hasattr(policy, "reset"):
         policy.reset()
 
 
-def main():
+def seed_episode(seed: int) -> None:
+    # Seed every RNG that may affect environment or policy inference.
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
+
+def main() -> None:
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
@@ -145,37 +177,96 @@ def main():
     parser.add_argument(
         "--dataset-root",
         type=Path,
-        default=Path("outputs/lerobot_datasets/panda_pickandplace_tqc_teacher_100"),
+        default=Path(
+            "outputs/lerobot_datasets/"
+            "panda_pickandplace_tqc_teacher_100"
+        ),
     )
     parser.add_argument(
         "--dataset-repo-id",
         default="local/panda_pickandplace_tqc_teacher_100",
     )
-    parser.add_argument("--episodes", type=int, default=5)
-    parser.add_argument("--max-steps", type=int, default=100)
-    parser.add_argument("--seed", type=int, default=0)
-    parser.add_argument("--action-scale", type=float, default=1.0)
+    parser.add_argument(
+        "--episodes",
+        type=int,
+        default=5,
+    )
+    parser.add_argument(
+        "--max-steps",
+        type=int,
+        default=100,
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=0,
+    )
+    parser.add_argument(
+        "--action-scale",
+        type=float,
+        default=1.0,
+    )
     parser.add_argument(
         "--out-dir",
         type=Path,
-        default=Path("outputs/smolvla_rollout/panda_pickandplace_500_rollout_5"),
+        default=Path(
+            "outputs/smolvla_rollout/"
+            "panda_pickandplace_500_rollout_5"
+        ),
     )
 
     args = parser.parse_args()
 
     if not args.checkpoint.exists():
-        raise FileNotFoundError(f"Checkpoint not found: {args.checkpoint}")
+        raise FileNotFoundError(
+            f"Checkpoint not found: {args.checkpoint}"
+        )
+
+    if not args.dataset_root.exists():
+        raise FileNotFoundError(
+            f"Dataset root not found: {args.dataset_root}"
+        )
+
+    if args.episodes <= 0:
+        raise ValueError(
+            f"Expected positive --episodes, got {args.episodes}"
+        )
+
+    if args.max_steps <= 0:
+        raise ValueError(
+            f"Expected positive --max-steps, got {args.max_steps}"
+        )
+
+    if args.seed < 0:
+        raise ValueError(
+            f"Expected non-negative --seed, got {args.seed}"
+        )
 
     if args.action_scale <= 0:
-        raise ValueError(f"Expected positive --action-scale, got {args.action_scale}")
+        raise ValueError(
+            f"Expected positive --action-scale, got {args.action_scale}"
+        )
 
-    args.out_dir.mkdir(parents=True, exist_ok=True)
+    args.out_dir.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    dataset_stats = get_dataset_stats(args.dataset_repo_id, args.dataset_root)
+    # Seed the initial policy and processor loading stage.
+    seed_episode(args.seed)
 
-    policy = SmolVLAPolicy.from_pretrained(str(args.checkpoint)).to(device).eval()
+    dataset_stats = get_dataset_stats(
+        args.dataset_repo_id,
+        args.dataset_root,
+    )
+
+    policy = (
+        SmolVLAPolicy.from_pretrained(str(args.checkpoint))
+        .to(device)
+        .eval()
+    )
     policy.config.device = device
 
     preprocessor, postprocessor = make_pre_post_processors(
@@ -183,14 +274,23 @@ def main():
         dataset_stats=dataset_stats,
     )
 
-    env = gym.make("PandaPickAndPlace-v3", render_mode="rgb_array")
+    env = gym.make(
+        "PandaPickAndPlace-v3",
+        render_mode="rgb_array",
+    )
 
     episode_results = []
 
     try:
         for ep in range(args.episodes):
-            obs, info = env.reset(seed=args.seed + ep)
+            episode_seed = args.seed + ep
+
+            # Re-seed all RNGs before each episode so that both the
+            # environment and stochastic policy inference can be reproduced.
+            seed_episode(episode_seed)
             reset_policy_if_supported(policy)
+
+            obs, info = env.reset(seed=episode_seed)
 
             initial_distance = goal_distance(obs)
             best_distance = initial_distance
@@ -214,14 +314,19 @@ def main():
                     device=device,
                 )
 
-                env_action_4d_raw = smolvla_action_6d[:4] * args.action_scale
+                env_action_4d_raw = (
+                    smolvla_action_6d[:4] * args.action_scale
+                )
+
                 env_action_4d = np.clip(
                     env_action_4d_raw,
                     env.action_space.low,
                     env.action_space.high,
                 ).astype(np.float32)
 
-                next_obs, reward, terminated, truncated, info = env.step(env_action_4d)
+                next_obs, reward, terminated, truncated, info = env.step(
+                    env_action_4d
+                )
 
                 distance = goal_distance(next_obs)
 
@@ -230,7 +335,9 @@ def main():
                 final_distance = distance
                 steps = step + 1
 
-                is_success = bool(info.get("is_success", False))
+                is_success = bool(
+                    info.get("is_success", False)
+                )
 
                 if is_success:
                     success = True
@@ -256,23 +363,30 @@ def main():
                         done_reason = "time_limit"
                     else:
                         done_reason = "terminated"
+
                     break
 
             result = {
                 "episode": ep,
+                "episode_seed": episode_seed,
                 "success": success,
                 "steps": steps,
                 "reward": total_reward,
                 "initial_distance": initial_distance,
                 "best_distance": best_distance,
                 "final_distance": final_distance,
-                "distance_improvement": initial_distance - best_distance,
+                "distance_improvement": (
+                    initial_distance - best_distance
+                ),
                 "done_reason": done_reason,
             }
 
             episode_results.append(result)
 
-            episode_path = args.out_dir / f"episode_{ep:04d}.json"
+            episode_path = (
+                args.out_dir / f"episode_{ep:04d}.json"
+            )
+
             episode_path.write_text(
                 json.dumps(
                     {
@@ -286,6 +400,7 @@ def main():
 
             print(
                 f"EP {ep:04d} | "
+                f"seed={episode_seed} | "
                 f"success={success} | "
                 f"steps={steps} | "
                 f"reward={total_reward:.2f} | "
@@ -298,7 +413,10 @@ def main():
     finally:
         env.close()
 
-    success_values = [r["success"] for r in episode_results]
+    success_values = [
+        result["success"]
+        for result in episode_results
+    ]
 
     summary = {
         "env_id": "PandaPickAndPlace-v3",
@@ -308,26 +426,85 @@ def main():
         "episodes": args.episodes,
         "max_steps": args.max_steps,
         "seed": args.seed,
+        "rng_seeded_per_episode": True,
         "device": device,
         "action_scale": args.action_scale,
-        "success_rate": float(np.mean(success_values)),
-        "success_count": int(np.sum(success_values)),
-        "mean_steps": float(np.mean([r["steps"] for r in episode_results])),
-        "mean_reward": float(np.mean([r["reward"] for r in episode_results])),
-        "mean_initial_distance": float(np.mean([r["initial_distance"] for r in episode_results])),
-        "mean_best_distance": float(np.mean([r["best_distance"] for r in episode_results])),
-        "mean_final_distance": float(np.mean([r["final_distance"] for r in episode_results])),
+        "success_rate": float(
+            np.mean(success_values)
+        ),
+        "success_count": int(
+            np.sum(success_values)
+        ),
+        "mean_steps": float(
+            np.mean(
+                [
+                    result["steps"]
+                    for result in episode_results
+                ]
+            )
+        ),
+        "mean_reward": float(
+            np.mean(
+                [
+                    result["reward"]
+                    for result in episode_results
+                ]
+            )
+        ),
+        "mean_initial_distance": float(
+            np.mean(
+                [
+                    result["initial_distance"]
+                    for result in episode_results
+                ]
+            )
+        ),
+        "mean_best_distance": float(
+            np.mean(
+                [
+                    result["best_distance"]
+                    for result in episode_results
+                ]
+            )
+        ),
+        "mean_final_distance": float(
+            np.mean(
+                [
+                    result["final_distance"]
+                    for result in episode_results
+                ]
+            )
+        ),
         "mean_distance_improvement": float(
-            np.mean([r["distance_improvement"] for r in episode_results])
+            np.mean(
+                [
+                    result["distance_improvement"]
+                    for result in episode_results
+                ]
+            )
         ),
         "episode_results": episode_results,
     }
 
-    summary_path = args.out_dir / "rollout_summary.json"
-    summary_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    summary_path = (
+        args.out_dir / "rollout_summary.json"
+    )
+
+    summary_path.write_text(
+        json.dumps(
+            summary,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
 
     print("\nROLLOUT_SUMMARY")
-    print(json.dumps(summary, indent=2))
+    print(
+        json.dumps(
+            summary,
+            indent=2,
+        )
+    )
     print(f"\nsaved_summary={summary_path}")
 
 
