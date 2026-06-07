@@ -33,7 +33,7 @@ TEACHER_MAX_STEPS = 35
 DESCENT_MAX_STEPS = 20
 OPEN_STEPS = 4
 RETREAT_STEPS = 6
-SETTLE_MAX_STEPS = 15
+SETTLE_MAX_STEPS = 5
 REQUIRED_STABLE_STEPS = 5
 
 
@@ -346,6 +346,16 @@ def parse_args() -> argparse.Namespace:
     )
 
     parser.add_argument(
+        "--max-attempts",
+        type=int,
+        default=None,
+        help=(
+            "Maximum number of consecutive seeds to try. "
+            "Defaults to max(2 * episodes, episodes + 20)."
+        ),
+    )
+
+    parser.add_argument(
         "--model-dir",
         type=Path,
         default=Path(
@@ -373,6 +383,25 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+
+    if args.episodes <= 0:
+        raise ValueError(
+            "--episodes must be greater than zero"
+        )
+
+    max_attempts = (
+        args.max_attempts
+        if args.max_attempts is not None
+        else max(
+            args.episodes * 2,
+            args.episodes + 20,
+        )
+    )
+
+    if max_attempts < args.episodes:
+        raise ValueError(
+            "--max-attempts must be greater than or equal to --episodes"
+        )
 
     model_path = (
         args.model_dir
@@ -405,6 +434,7 @@ def main() -> None:
 
     frames_dir = args.out_dir / "frames"
     episodes_dir = args.out_dir / "episodes"
+    staging_dir = args.out_dir / ".staging"
 
     frames_dir.mkdir(
         parents=True,
@@ -412,6 +442,11 @@ def main() -> None:
     )
 
     episodes_dir.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    staging_dir.mkdir(
         parents=True,
         exist_ok=True,
     )
@@ -464,8 +499,11 @@ def main() -> None:
         "distance_to_goal",
     ]
 
-    episode_summaries = []
+    all_rows: list[dict[str, Any]] = []
+    episode_summaries: list[dict[str, Any]] = []
+    rejected_attempts: list[dict[str, Any]] = []
     total_steps = 0
+    attempted_seed_count = 0
     phase_frame_counts = {
         "teacher": 0,
         "descent": 0,
@@ -487,13 +525,18 @@ def main() -> None:
 
             writer.writeheader()
 
-            for episode in range(
-                args.episodes
+            episode = 0
+
+            while (
+                episode < args.episodes
+                and attempted_seed_count < max_attempts
             ):
                 seed = (
                     args.seed_start
-                    + episode
+                    + attempted_seed_count
                 )
+
+                attempted_seed_count += 1
 
                 observation, _ = env.reset(
                     seed=seed
@@ -543,8 +586,13 @@ def main() -> None:
                 )
 
                 episode_frame_dir = (
-                    frames_dir
-                    / f"episode_{episode:04d}"
+                    staging_dir
+                    / f"seed_{seed:06d}"
+                )
+
+                shutil.rmtree(
+                    episode_frame_dir,
+                    ignore_errors=True,
                 )
 
                 episode_frame_dir.mkdir(
@@ -580,7 +628,6 @@ def main() -> None:
                     nonlocal full_success
                     nonlocal final_metrics
                     nonlocal episode_reward
-                    nonlocal total_steps
 
                     action = np.asarray(
                         action,
@@ -612,8 +659,8 @@ def main() -> None:
                     )
 
                     frame_abs_path = (
-                        args.out_dir
-                        / frame_rel_path
+                        episode_frame_dir
+                        / f"frame_{step_index:04d}.png"
                     )
 
                     save_rgb_frame(
@@ -684,7 +731,6 @@ def main() -> None:
                         ),
                     }
 
-                    writer.writerow(row)
                     episode_rows.append(row)
 
                     observation = (
@@ -692,10 +738,8 @@ def main() -> None:
                     )
 
                     phase_steps[phase] += 1
-                    phase_frame_counts[phase] += 1
 
                     episode_reward += reward
-                    total_steps += 1
                     step_index += 1
 
                     return terminal_success
@@ -745,10 +789,26 @@ def main() -> None:
                         break
 
                 if not teacher_reached_hover:
-                    raise RuntimeError(
-                        f"Seed {seed} failed to reach "
-                        f"the elevated goal"
+                    rejected_attempts.append(
+                        {
+                            "seed": seed,
+                            "reason": "teacher_hover_failure",
+                            "attempted_steps": len(episode_rows),
+                            "phase_steps": phase_steps.copy(),
+                        }
                     )
+
+                    shutil.rmtree(
+                        episode_frame_dir,
+                        ignore_errors=True,
+                    )
+
+                    print(
+                        f"REJECT seed={seed} | "
+                        "reason=teacher_hover_failure"
+                    )
+
+                    continue
 
                 for _ in range(
                     DESCENT_MAX_STEPS
@@ -807,10 +867,26 @@ def main() -> None:
                         break
 
                 if not pre_release_reached:
-                    raise RuntimeError(
-                        f"Seed {seed} failed to reach "
-                        f"the pre-release tolerance"
+                    rejected_attempts.append(
+                        {
+                            "seed": seed,
+                            "reason": "pre_release_failure",
+                            "attempted_steps": len(episode_rows),
+                            "phase_steps": phase_steps.copy(),
+                        }
                     )
+
+                    shutil.rmtree(
+                        episode_frame_dir,
+                        ignore_errors=True,
+                    )
+
+                    print(
+                        f"REJECT seed={seed} | "
+                        "reason=pre_release_failure"
+                    )
+
+                    continue
 
                 for _ in range(
                     OPEN_STEPS
@@ -865,10 +941,49 @@ def main() -> None:
                         break
 
                 if not full_success:
-                    raise RuntimeError(
-                        f"Seed {seed} failed the "
-                        f"full-release success criteria"
+                    rejected_attempts.append(
+                        {
+                            "seed": seed,
+                            "reason": "full_release_failure",
+                            "attempted_steps": len(episode_rows),
+                            "phase_steps": phase_steps.copy(),
+                            "stable_count": stable_count,
+                            "final_metrics": final_metrics,
+                        }
                     )
+
+                    shutil.rmtree(
+                        episode_frame_dir,
+                        ignore_errors=True,
+                    )
+
+                    print(
+                        f"REJECT seed={seed} | "
+                        "reason=full_release_failure"
+                    )
+
+                    continue
+
+                final_episode_frame_dir = (
+                    frames_dir
+                    / f"episode_{episode:04d}"
+                )
+
+                if final_episode_frame_dir.exists():
+                    raise FileExistsError(
+                        "Accepted episode frame directory "
+                        f"already exists: {final_episode_frame_dir}"
+                    )
+
+                episode_frame_dir.rename(
+                    final_episode_frame_dir
+                )
+
+                all_rows.extend(episode_rows)
+                total_steps += len(episode_rows)
+
+                for phase, count in phase_steps.items():
+                    phase_frame_counts[phase] += count
 
                 final_cube_position = np.asarray(
                     observation[
@@ -940,6 +1055,16 @@ def main() -> None:
                     f"xy={final_metrics['xy_distance']:.4f}"
                 )
 
+                episode += 1
+
+            if episode < args.episodes:
+                raise RuntimeError(
+                    "Could not collect the requested number "
+                    "of successful episodes within --max-attempts"
+                )
+
+            writer.writerows(all_rows)
+
         metadata = {
             "env_id": "PandaPickAndPlace-v3",
             "dataset_variant": (
@@ -960,8 +1085,18 @@ def main() -> None:
             "smolvla_action_shape": [6],
             "image_source": "env.render()",
             "image_format": "png",
-            "episodes": args.episodes,
+            "requested_episodes": args.episodes,
+            "episodes": len(episode_summaries),
             "seed_start": args.seed_start,
+            "max_attempts": max_attempts,
+            "attempted_seed_count": attempted_seed_count,
+            "accepted_seeds": [
+                episode["seed"]
+                for episode in episode_summaries
+            ],
+            "rejected_seed_count": len(rejected_attempts),
+            "rejected_attempts": rejected_attempts,
+            "export_complete": True,
             "total_steps": total_steps,
             "phase_frame_counts": (
                 phase_frame_counts
@@ -975,6 +1110,9 @@ def main() -> None:
             ),
             "required_stable_steps": (
                 REQUIRED_STABLE_STEPS
+            ),
+            "settle_max_steps": (
+                SETTLE_MAX_STEPS
             ),
         }
 
@@ -1051,11 +1189,23 @@ def main() -> None:
             f"/{args.episodes}"
         )
         print(
+            f"Attempted seeds: "
+            f"{attempted_seed_count}"
+        )
+        print(
+            f"Rejected seeds: "
+            f"{len(rejected_attempts)}"
+        )
+        print(
             "Phase frames: "
             f"{phase_frame_counts}"
         )
 
     finally:
+        shutil.rmtree(
+            staging_dir,
+            ignore_errors=True,
+        )
         env.close()
         normalization_env.close()
 
