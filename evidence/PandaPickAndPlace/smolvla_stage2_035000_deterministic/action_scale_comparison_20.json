@@ -1,0 +1,263 @@
+{
+  "evaluation": {
+    "episodes": 20,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "max_steps": 50,
+    "rng_seeded_per_episode": true,
+    "action_scales": [
+      1.0,
+      0.75
+    ]
+  },
+  "baseline": {
+    "checkpoint": "original_010000",
+    "action_scale": 1.0,
+    "success_count": 7,
+    "episodes": 20,
+    "success_rate": 0.35
+  },
+  "results_ranked": [
+    {
+      "checkpoint": "030000",
+      "accumulated_steps": 40000,
+      "action_scale": 1.0,
+      "success_count": 12,
+      "success_rate": 0.6,
+      "mean_steps": 24.65,
+      "mean_reward": -24.05,
+      "mean_best_distance": 0.08976926542818546,
+      "mean_final_distance": 0.15587600972503424,
+      "mean_distance_improvement": 0.08590981140732765,
+      "successful_seeds": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        17,
+        19
+      ]
+    },
+    {
+      "checkpoint": "045000",
+      "accumulated_steps": 55000,
+      "action_scale": 1.0,
+      "success_count": 11,
+      "success_rate": 0.55,
+      "mean_steps": 26.5,
+      "mean_reward": -25.95,
+      "mean_best_distance": 0.09475434022024273,
+      "mean_final_distance": 0.17058582874014974,
+      "mean_distance_improvement": 0.08092473661527037,
+      "successful_seeds": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        17,
+        19
+      ]
+    },
+    {
+      "checkpoint": "035000",
+      "accumulated_steps": 45000,
+      "action_scale": 1.0,
+      "success_count": 11,
+      "success_rate": 0.55,
+      "mean_steps": 26.65,
+      "mean_reward": -26.1,
+      "mean_best_distance": 0.10077491179108619,
+      "mean_final_distance": 0.2139050044119358,
+      "mean_distance_improvement": 0.07490416504442692,
+      "successful_seeds": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16,
+        19
+      ]
+    },
+    {
+      "checkpoint": "025000",
+      "accumulated_steps": 35000,
+      "action_scale": 1.0,
+      "success_count": 10,
+      "success_rate": 0.5,
+      "mean_steps": 29.2,
+      "mean_reward": -28.7,
+      "mean_best_distance": 0.09827959910035133,
+      "mean_final_distance": 0.18453365080058576,
+      "mean_distance_improvement": 0.07739947773516179,
+      "successful_seeds": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        9,
+        12,
+        14,
+        17,
+        19
+      ]
+    },
+    {
+      "checkpoint": "050000",
+      "accumulated_steps": 60000,
+      "action_scale": 1.0,
+      "success_count": 10,
+      "success_rate": 0.5,
+      "mean_steps": 28.7,
+      "mean_reward": -28.2,
+      "mean_best_distance": 0.1011326776817441,
+      "mean_final_distance": 0.21696132477372884,
+      "mean_distance_improvement": 0.07454639915376901,
+      "successful_seeds": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        19
+      ]
+    },
+    {
+      "checkpoint": "050000",
+      "accumulated_steps": 60000,
+      "action_scale": 0.75,
+      "success_count": 6,
+      "success_rate": 0.3,
+      "mean_steps": 42.5,
+      "mean_reward": -42.2,
+      "mean_best_distance": 0.11221091682091355,
+      "mean_final_distance": 0.13025644263252617,
+      "mean_distance_improvement": 0.06346816001459957,
+      "successful_seeds": [
+        1,
+        2,
+        8,
+        14,
+        17,
+        19
+      ]
+    },
+    {
+      "checkpoint": "045000",
+      "accumulated_steps": 55000,
+      "action_scale": 0.75,
+      "success_count": 6,
+      "success_rate": 0.3,
+      "mean_steps": 38.85,
+      "mean_reward": -38.55,
+      "mean_best_distance": 0.1138791473582387,
+      "mean_final_distance": 0.13938909601420163,
+      "mean_distance_improvement": 0.06179992947727442,
+      "successful_seeds": [
+        1,
+        4,
+        8,
+        14,
+        17,
+        19
+      ]
+    },
+    {
+      "checkpoint": "025000",
+      "accumulated_steps": 35000,
+      "action_scale": 0.75,
+      "success_count": 6,
+      "success_rate": 0.3,
+      "mean_steps": 38.7,
+      "mean_reward": -38.4,
+      "mean_best_distance": 0.12336287274956703,
+      "mean_final_distance": 0.2017887081950903,
+      "mean_distance_improvement": 0.05231620408594608,
+      "successful_seeds": [
+        1,
+        2,
+        14,
+        16,
+        17,
+        19
+      ]
+    },
+    {
+      "checkpoint": "035000",
+      "accumulated_steps": 45000,
+      "action_scale": 0.75,
+      "success_count": 5,
+      "success_rate": 0.25,
+      "mean_steps": 41.05,
+      "mean_reward": -40.8,
+      "mean_best_distance": 0.11763645149767399,
+      "mean_final_distance": 0.1790089126676321,
+      "mean_distance_improvement": 0.058042625337839125,
+      "successful_seeds": [
+        1,
+        12,
+        14,
+        17,
+        19
+      ]
+    },
+    {
+      "checkpoint": "030000",
+      "accumulated_steps": 40000,
+      "action_scale": 0.75,
+      "success_count": 4,
+      "success_rate": 0.2,
+      "mean_steps": 42.85,
+      "mean_reward": -42.65,
+      "mean_best_distance": 0.12150030881166458,
+      "mean_final_distance": 0.16551258657127618,
+      "mean_distance_improvement": 0.054178768023848536,
+      "successful_seeds": [
+        1,
+        2,
+        14,
+        17
+      ]
+    }
+  ]
+}

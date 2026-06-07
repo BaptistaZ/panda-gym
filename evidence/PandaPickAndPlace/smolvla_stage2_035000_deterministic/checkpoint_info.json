@@ -1,0 +1,12 @@
+{
+  "selected_stage2_checkpoint": "035000",
+  "accumulated_training_steps": 45000,
+  "checkpoint_path": "outputs/train/smolvla_panda_pickandplace_tqc_500_stage2_50000/checkpoints/035000/pretrained_model",
+  "model_file": "outputs/train/smolvla_panda_pickandplace_tqc_500_stage2_50000/checkpoints/035000/pretrained_model/model.safetensors",
+  "model_size_bytes": 1197789224,
+  "model_sha256": "9504d5a9bafa4049c1786e50af3b01cb7731686e3bfe5f756f26c6fea3371e3c",
+  "action_scale": 1.0,
+  "official_success_count": 29,
+  "official_episodes": 50,
+  "official_success_rate": 0.58
+}

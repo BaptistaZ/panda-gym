@@ -1,0 +1,127 @@
+{
+  "evaluation": {
+    "episodes": 20,
+    "seeds": "0-19",
+    "max_steps": 50,
+    "action_scale": 1.0,
+    "rng_seeded_per_episode": true
+  },
+  "baseline": {
+    "checkpoint": "smolvla_panda_pickandplace_tqc_500_10000/checkpoints/010000",
+    "success_count": 7,
+    "episodes": 20,
+    "success_rate": 0.35
+  },
+  "stage2_results_ranked": [
+    {
+      "checkpoint": "030000",
+      "accumulated_steps": 40000,
+      "success_count": 12,
+      "success_rate": 0.6,
+      "mean_steps": 24.65,
+      "mean_reward": -24.05,
+      "mean_best_distance": 0.08976926542818546,
+      "mean_final_distance": 0.15587600972503424,
+      "mean_distance_improvement": 0.08590981140732765
+    },
+    {
+      "checkpoint": "045000",
+      "accumulated_steps": 55000,
+      "success_count": 11,
+      "success_rate": 0.55,
+      "mean_steps": 26.5,
+      "mean_reward": -25.95,
+      "mean_best_distance": 0.09475434022024273,
+      "mean_final_distance": 0.17058582874014974,
+      "mean_distance_improvement": 0.08092473661527037
+    },
+    {
+      "checkpoint": "035000",
+      "accumulated_steps": 45000,
+      "success_count": 11,
+      "success_rate": 0.55,
+      "mean_steps": 26.65,
+      "mean_reward": -26.1,
+      "mean_best_distance": 0.10077491179108619,
+      "mean_final_distance": 0.2139050044119358,
+      "mean_distance_improvement": 0.07490416504442692
+    },
+    {
+      "checkpoint": "025000",
+      "accumulated_steps": 35000,
+      "success_count": 10,
+      "success_rate": 0.5,
+      "mean_steps": 29.2,
+      "mean_reward": -28.7,
+      "mean_best_distance": 0.09827959910035133,
+      "mean_final_distance": 0.18453365080058576,
+      "mean_distance_improvement": 0.07739947773516179
+    },
+    {
+      "checkpoint": "050000",
+      "accumulated_steps": 60000,
+      "success_count": 10,
+      "success_rate": 0.5,
+      "mean_steps": 28.7,
+      "mean_reward": -28.2,
+      "mean_best_distance": 0.1011326776817441,
+      "mean_final_distance": 0.21696132477372884,
+      "mean_distance_improvement": 0.07454639915376901
+    },
+    {
+      "checkpoint": "020000",
+      "accumulated_steps": 30000,
+      "success_count": 9,
+      "success_rate": 0.45,
+      "mean_steps": 31.15,
+      "mean_reward": -30.7,
+      "mean_best_distance": 0.09811897892504931,
+      "mean_final_distance": 0.17633329499512912,
+      "mean_distance_improvement": 0.07756009791046381
+    },
+    {
+      "checkpoint": "040000",
+      "accumulated_steps": 50000,
+      "success_count": 9,
+      "success_rate": 0.45,
+      "mean_steps": 30.85,
+      "mean_reward": -30.4,
+      "mean_best_distance": 0.10018155202269555,
+      "mean_final_distance": 0.267734719067812,
+      "mean_distance_improvement": 0.07549752481281757
+    },
+    {
+      "checkpoint": "010000",
+      "accumulated_steps": 20000,
+      "success_count": 9,
+      "success_rate": 0.45,
+      "mean_steps": 31.15,
+      "mean_reward": -30.7,
+      "mean_best_distance": 0.10352151608094573,
+      "mean_final_distance": 0.1937688915990293,
+      "mean_distance_improvement": 0.07215756075456739
+    },
+    {
+      "checkpoint": "015000",
+      "accumulated_steps": 25000,
+      "success_count": 8,
+      "success_rate": 0.4,
+      "mean_steps": 33.5,
+      "mean_reward": -33.1,
+      "mean_best_distance": 0.08909368384629487,
+      "mean_final_distance": 0.23750799763947725,
+      "mean_distance_improvement": 0.08658539298921823
+    },
+    {
+      "checkpoint": "005000",
+      "accumulated_steps": 15000,
+      "success_count": 7,
+      "success_rate": 0.35,
+      "mean_steps": 36.15,
+      "mean_reward": -35.8,
+      "mean_best_distance": 0.1109840601682663,
+      "mean_final_distance": 0.21545541640371085,
+      "mean_distance_improvement": 0.06469501666724682
+    }
+  ]
+}

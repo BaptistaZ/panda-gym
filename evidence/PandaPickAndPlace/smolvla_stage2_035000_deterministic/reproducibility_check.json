@@ -1,0 +1,14 @@
+{
+  "all_first_20_identical": true,
+  "checkpoints": {
+    "030000": {
+      "first_20_identical": true
+    },
+    "045000": {
+      "first_20_identical": true
+    },
+    "035000": {
+      "first_20_identical": true
+    }
+  }
+}
